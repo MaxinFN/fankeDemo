@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+.wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+
+    font: 100 12px "Microsoft Yahei";
+}
+
+/* ------------头部------------ */
+#top {
+    margin: 10px 0 0 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #919191;
+}
+
+/* ------------登录------------ */
+#log {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    .regist {
+        width: 100%;
+        margin: 45px 0 0 0;
+
+        h1 {
+            height: 35px;
+            width: 415px;
+            float: right;
+            line-height: 35px;
+            margin: 0 100px 0 0;
+            font-size: 22px;
+            color: #979797;
+            font-weight: 900;
+            // border-bottom: 2px solid #b81e20;
+
+            span {
+                font-size: 14px;
+                float: right;
+                margin-right: 10px;
+                color: #979797;
+                font-weight: normal;
+
+                a {
+                    color: #b52024;
+                    margin: 0 0 0 3px;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .content_right {
+            width: 465px;
+            height: 500px;
+            float: left;
+            margin: 0px 0 0 130px;
+        }
+
+        .content_left {
+            width: 415px;
+            float: right;
+            margin: 0px 95px 0 0;
+
+            .login_part {
+                width: 398px;
+                border: 1px solid #d1d1d1;
+
+
+                .login_tab {
+                    width: 101%;
+                    height: 35px;
+
+                    span {
+                        display: inline-block;
+                        width: 199px;
+                        height: 35px;
+                        border-bottom: 1px solid #cbcbcb;
+                        margin: 0 0 30px 0;
+
+                        color: #656565;
+                        font-size: 14px;
+                        line-height: 35px;
+                        text-align: center;
+                        font-weight: bolder;
+
+                    }
+
+                    .active {
+                        background-color: #b42025;
+                        color: #fff;
+                        font-weight: 900;
+                    }
+                }
+
+                form {
+                    width: 380px;
+                    padding: 10px 0 0 20px;
+
+
+
+                    .loginchange {
+                        display: none;
+
+                        .clearfix {
+                            position: relative;
+
+                            #v_container {
+                                width: 140px;
+                                height: 45px;
+                                position: absolute;
+                                top: 0;
+                                left: 137px;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    .selected {
+                        display: block;
+                    }
+
+                    .username,
+                    .password {
+                        width: 360px;
+                        border: 1px solid #cbcbcb;
+                        padding: 17px 10px;
+                        box-sizing: border-box;
+                    }
+
+                    .tips {
+                        width: 220px;
+                        min-height: 16px;
+                        line-height: 16px;
+                        margin: 0 0 0 48px;
+                        text-indent: 30px;
+                        color: #A10000;
+                        background: url(../img/login/login_spritesbg.png) -351px -662px no-repeat;
+                        background-color: #FFF6F7;
+                        border: 1px solid #CC9998;
+                        visibility: hidden;
+                        clear: both;
+
+                    }
+
+                    p {
+                        margin: 20px 0 0 0;
+
+                        a {
+                            font-weight: bold;
+                            color: #b42025;
+                            font-size: 14px;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+
+                    /*  切换快速登录 */
+                    .phone {
+                        width: 250px;
+                        height: 45px;
+                        border: 1px solid #cbcbcb;
+                        padding: 17px 10px;
+                        box-sizing: border-box;
+                        float: left;
+                    }
+
+                    .getcode {
+                        width: 98px;
+                        border: 1px solid #cbcbcb;
+                        text-align: center;
+                        line-height: 49px;
+                        float: right;
+                        background-color: #f5f5f5;
+
+                        a {
+                            display: block;
+                            font-weight: bold;
+                            height: 45px;
+                            color: #b42025;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .identify {
+                        width: 144px;
+                        height: 45px;
+                        padding: 17px 10px;
+                        border: 1px solid #cbcbcb;
+                        float: left;
+                        vertical-align: middle;
+                    }
+
+                    a {
+                        &:hover {
+                            color: #CC0000 !important;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .phoneidentify {
+                        width: 360px;
+                        height: 45px;
+                        border: 1px solid #cbcbcb;
+                        padding: 17px 10px;
+                        box-sizing: border-box;
+                    }
+
+                    /* 登录按钮 */
+
+                    .loginbtn {
+                        width: 360px;
+                        background-color: #b42025;
+                        color: #fff;
+                        font-size: 20px;
+                        height: 45px;
+                        line-height: 45px;
+                        margin: 8px 0 40px 0;
+                        vertical-align: middle;
+                        cursor: pointer;
+
+                        &:hover {
+                            font-weight: 900;
+                        }
+
+
+                    }
+
+
+                }
+
+                .company {
+                    height: 97px;
+                    border-top: 1px dashed #cbcbcb;
+
+                    .contact {
+                        margin: 0 0 0 20px;
+                        cursor: pointer;
+
+                        h2 {
+                            font-weight: bold;
+                            height: 42px;
+                            line-height: 42px;
+                            color: #979797;
+
+                            img {
+                                border: 0;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* ------------底部------------ */
+#bottom {
+    width: 980px;
+    font: 100 12px "宋体";
+    color: #999;
+
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    border-top: 1px solid #999;
+
+    #bottoms {
+        margin: 0 0 20px 0;
+    }
+
+    #footerArea {
+        width: 100%;
+        margin: 0 auto;
+
+        .subFooter {
+            margin-bottom: 25px;
+            text-align: center;
+
+            a {
+                width: 113px;
+                height: 42px;
+                display: inline-block;
+                margin: 0 10px;
+
+                background-image: url("../img/register/spritesbg.png");
+                background-repeat: no-repeat;
+            }
+
+            a:nth-child(1) {
+                background-position: 0 -400px;
+            }
+
+            a:nth-child(2) {
+                width: 156px;
+                height: 45px;
+
+                background-position: 0 -448px;
+            }
+
+            a:nth-child(3) {
+                width: 96px;
+                background-position: 0 -494px;
+            }
+
+            a:nth-child(4) {
+                width: 101px;
+                background-position: -97px -494px;
+            }
+        }
+    }
+}

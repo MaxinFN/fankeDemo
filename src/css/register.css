@@ -1,0 +1,251 @@
+@charset "UTF-8";
+.wrapper {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  font: 100 12px " SimSun";
+}
+
+/* ------------头部------------ */
+#top {
+  margin: 10px 0 0 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #919191;
+}
+
+/* ------------表单------------ */
+#form:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+#form .regist {
+  width: 100%;
+  margin: 45px 0 0 0;
+}
+#form .regist h1 {
+  height: 35px;
+  width: 415px;
+  float: right;
+  line-height: 35px;
+  margin: 0 100px 0 0;
+  font-size: 20px;
+  color: #a2a2a2;
+  font-weight: bolder;
+  border-bottom: 2px solid #b81e20;
+}
+#form .regist h1 span {
+  font-size: 14px;
+  float: right;
+}
+#form .regist h1 span a {
+  color: #b52024;
+  margin: 0 0 0 3px;
+}
+#form .regist h1 span a:hover {
+  text-decoration: underline;
+}
+#form .regist .content_right {
+  width: 465px;
+  height: 500px;
+  float: left;
+  margin: 0px 0 0 130px;
+}
+#form .regist .content_left {
+  width: 415px;
+  float: right;
+  margin: 0px 95px 0 0;
+}
+#form .regist .content_left .email ul {
+  /* 定义 */
+}
+#form .regist .content_left .email ul li {
+  width: 415px;
+  height: auto;
+  clear: both;
+  margin-top: 15px;
+  position: relative;
+}
+#form .regist .content_left .email ul li input {
+  height: 43px;
+  border: 1px solid #cbcbcb;
+  padding: 0 0 0 8px;
+  color: #656565;
+  background-color: #fff;
+}
+#form .regist .content_left .email ul li span {
+  color: #999;
+  font-size: 12px;
+  line-height: 12px;
+}
+#form .regist .content_left .email ul li .tips,
+#form .regist .content_left .email ul li .tips2 {
+  color: #a10000;
+  border: 1px #ffd5d5 solid;
+  background-color: #fff;
+  padding: 3px 5px;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: 20;
+}
+#form .regist .content_left .email ul li:nth-child(1) {
+  /* 验证码 */
+}
+#form .regist .content_left .email ul li:nth-child(1) input {
+  width: 260px;
+}
+#form .regist .content_left .email ul li:nth-child(1) #v_container {
+  width: 140px;
+  height: 45px;
+  float: right;
+}
+#form .regist .content_left .email ul li:nth-child(2) {
+  /* 手机 */
+}
+#form .regist .content_left .email ul li:nth-child(2) input {
+  width: 260px;
+}
+#form .regist .content_left .email ul li:nth-child(2) a {
+  display: block;
+  float: right;
+  width: 142px;
+  height: 45px;
+  line-height: 45px;
+  background-color: #f5f5f5;
+  color: #b52024 !important;
+  text-align: center;
+  margin: 0 0 0 10px;
+  font-weight: bolder;
+  border: 1px solid #cbcbcb;
+}
+#form .regist .content_left .email ul li:nth-child(2) a .v2regList_Btnimg {
+  display: none;
+}
+#form .regist .content_left .email ul li:nth-child(2) .phoneTips {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+#form .regist .content_left .email ul li:nth-child(2) .v2reg_tips01 {
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 0;
+}
+#form .regist .content_left .email ul li:nth-child(3) {
+  /* 手机验证码 */
+}
+#form .regist .content_left .email ul li:nth-child(3) input {
+  width: 410px;
+}
+#form .regist .content_left .email ul li:nth-child(3) .phonecodeTips {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+#form .regist .content_left .email ul li:nth-child(4) {
+  /* 登陆密码 */
+}
+#form .regist .content_left .email ul li:nth-child(4) input {
+  width: 410px;
+}
+#form .regist .content_left .email ul li:nth-child(4) .pswTips {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+#form .regist .content_left .email ul li:nth-child(5) {
+  /* 再次输入密码 */
+}
+#form .regist .content_left .email ul li:nth-child(5) input {
+  width: 410px;
+}
+#form .regist .content_left .email ul li:nth-child(5) .repasswordTips {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+#form .regist .content_left .email ul li:nth-child(6) {
+  /* 注册 */
+}
+#form .regist .content_left .email ul li:nth-child(6) .v2reg_bt {
+  margin: 10px 0 0 0;
+}
+#form .regist .content_left .email ul li:nth-child(6) .v2reg_bt span {
+  color: #9d9d9d;
+  font-size: 14px;
+  line-height: 12px;
+  font-weight: bolder;
+  margin: 0 0 10px 0;
+}
+#form .regist .content_left .email ul li:nth-child(6) .v2reg_bt span label {
+  text-align: right;
+}
+#form .regist .content_left .email ul li:nth-child(6) .v2reg_bt span label a {
+  font-size: 12px;
+  color: #b52024;
+  font-weight: bolder;
+}
+#form .regist .content_left .email ul li:nth-child(6) .v2reg_bt span label a:hover {
+  text-decoration: underline;
+}
+#form .regist .content_left .email ul li:nth-child(6) .v2reg_bt span a .submitStyle {
+  width: 100%;
+  height: 45px;
+  background-color: #9A9A9A;
+  line-height: 45px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  clear: both;
+}
+
+/* ------------底部------------ */
+#bottom {
+  width: 980px;
+  font: 100 12px "宋体";
+  color: #999;
+  margin: 0 auto;
+  padding-top: 15px;
+  text-align: center;
+}
+#bottom #bottoms {
+  margin: 0 0 20px 0;
+}
+#bottom #footerArea {
+  width: 100%;
+  margin: 0 auto;
+}
+#bottom #footerArea .subFooter {
+  margin-bottom: 25px;
+  text-align: center;
+}
+#bottom #footerArea .subFooter a {
+  width: 113px;
+  height: 42px;
+  display: inline-block;
+  margin: 0 10px;
+  background-image: url("../img/register/spritesbg.png");
+  background-repeat: no-repeat;
+}
+#bottom #footerArea .subFooter a:nth-child(1) {
+  background-position: 0 -400px;
+}
+#bottom #footerArea .subFooter a:nth-child(2) {
+  width: 156px;
+  height: 45px;
+  background-position: 0 -448px;
+}
+#bottom #footerArea .subFooter a:nth-child(3) {
+  width: 96px;
+  background-position: 0 -494px;
+}
+#bottom #footerArea .subFooter a:nth-child(4) {
+  width: 101px;
+  background-position: -97px -494px;
+}
