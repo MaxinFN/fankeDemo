@@ -1,0 +1,279 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  font-family: "宋体";
+}
+
+.container {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#fanke {
+  width: 100%;
+  height: 100%;
+  font-size: 12px
+  /*-------------头部-------------*/
+  /*-------------main-------------*/
+}
+#fanke .header {
+  height: 167px;
+  background-color: #fff;
+}
+#fanke .header .headerArea .headerTop {
+  height: 32px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ccc;
+  color: #808080;
+  line-height: 32px;
+}
+#fanke .header .headerArea .headerTop .headerTopRight {
+  width: 126px;
+  height: 32px;
+  position: relative;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .notice {
+  width: 55px;
+  padding-left: 26px;
+  height: 100%;
+  background: url("../img/home/notice.png") no-repeat scroll 0px center;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .notice a {
+  display: inline-block;
+  width: 55px;
+  color: #808080;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 {
+  float: right;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat {
+  color: #808080;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat img {
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat .wexin {
+  width: 148px;
+  height: 168px;
+  background: #fff;
+  display: none;
+  position: absolute;
+  right: 0;
+  border: 1px solid #ddd;
+  z-index: 100;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat .wexin img {
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 .weibo {
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft {
+  min-width: 240px;
+  height: 32px;
+  line-height: 32px;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft span a {
+  color: #808080;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft .user a {
+  padding-right: 7px;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft .myorder {
+  padding-right: 14px;
+}
+#fanke .header .headerMiddle {
+  height: 62px;
+  margin-top: 20px;
+}
+#fanke .header .headerMiddle .vanclSearch {
+  width: 438px;
+  height: 60px;
+  padding-top: 8px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab {
+  height: 30px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .search #searchTxt {
+  width: 249px;
+  height: 27px;
+  padding: 0 5px;
+  line-height: 27px;
+  border: 1px solid #c9caca;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .search #searchBtn {
+  width: 49px;
+  height: 29px;
+  border: none;
+  cursor: pointer;
+  background: url("../img/home/vanclsprite.png") no-repeat -100px 0px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart {
+  width: 105px;
+  height: 27px;
+  line-height: 27px;
+  border: 1px solid #c1383e;
+  background: url("../img/home/vanclsprite.png") no-repeat scroll -154px 0px;
+  position: relative;
+  z-index: 10;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart a {
+  padding-left: 29px;
+  padding-top: 6px;
+  font-size: 12px;
+  color: #fff;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow {
+  position: absolute;
+  width: 328px;
+  height: 298px;
+  border: 1px solid #b81c22;
+  z-index: 100;
+  left: -224px;
+  background-color: #fff;
+  color: #727171;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox {
+  width: 286px;
+  height: 268px;
+  margin: 20px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox p {
+  border-bottom: 1px solid #ececec;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox .certgoods {
+  height: 208px;
+  overflow: hidden;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox .certgoods .certbottom {
+  height: 40px;
+  border-top: 1px solid #ececec;
+}
+#fanke .header .headerBottom {
+  height: 46px
+  /*一级导航*/
+}
+#fanke .header .headerBottom .logo {
+  width: 185px;
+  height: 46px;
+  background: url("../img/home/logo18546.png");
+  cursor: pointer;
+}
+#fanke .header .headerBottom .nav > ul {
+  /*公共样式*/
+}
+#fanke .header .headerBottom .nav > ul > li {
+  float: left;
+  width: 99px;
+  margin-top: 20px;
+  height: 100%;
+  text-align: center;
+  position: relative
+  /*二级导航*/
+}
+#fanke .header .headerBottom .nav > ul > li > a {
+  display: block;
+  font-size: 16px;
+  color: #727171;
+  position: relative;
+  padding-bottom: 5px;
+}
+#fanke .header .headerBottom .nav > ul > li > a:after {
+  content: "|";
+  height: 12px;
+  color: #888888;
+  float: right;
+}
+#fanke .header .headerBottom .nav > ul > li > a:hover {
+  color: #a10000;
+}
+#fanke .header .headerBottom .nav > ul > li .menu {
+  display: none;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 99px;
+  position: absolute;
+  z-index: 100;
+  overflow: hidden;
+}
+#fanke .header .headerBottom .nav > ul > li .menu li {
+  float: left;
+  width: 99px;
+  margin-top: 20px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+#fanke .header .headerBottom .nav > ul > li .menu li a {
+  display: block;
+  font-size: 16px;
+  color: #727171;
+  position: relative;
+  padding-bottom: 5px;
+}
+#fanke .header .headerBottom .nav > ul > li .menu li a:hover {
+  color: #a10000;
+}
+#fanke .header .headerBottom .nav > ul > li .down {
+  border-top: 5px solid #b81c22 !important;
+}
+#fanke .main {
+  /*轮播图*/
+}
+#fanke .main .banner {
+  width: 100%;
+  height: 535px;
+  margin: 30px auto 0;
+}
+#fanke .main .banner .carousel {
+  width: 100%;
+  height: 535px;
+  overflow: hidden;
+  position: relative
+  /*图片*/
+  /*圆点*/
+  /*next prew*/
+}
+#fanke .main .banner .carousel .image_reel {
+  width: 100%;
+  height: 535px;
+}
+#fanke .main .banner .carousel .image_reel li {
+  position: absolute;
+  height: 100%;
+}
+#fanke .main .banner .carousel .paging {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+}
+#fanke .main .banner .carousel .paging span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #dddddd;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#fanke .main .banner .carousel .change .previous .arrow {
+  display: block;
+  width: 18px;
+  height: 54px;
+  position: absolute;
+  margin-top: -27px;
+  top: 50%;
+  z-index: 10;
+}
+#fanke .main .banner .carousel .change .previous .arrowleft {
+  left: 10px;
+  background: url("../img/home/focus_lr0918.png") no-repeat;
+}

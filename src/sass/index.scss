@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: "宋体";
+}
+
+.container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#fanke {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+
+    /*-------------头部-------------*/
+    .header {
+        height: 167px;
+        background-color: #fff;
+
+        .headerArea {
+            .headerTop {
+                height: 32px;
+                background-color: #f7f7f7;
+                border-bottom: 1px solid #ccc;
+                color: #808080;
+                line-height: 32px;
+
+                .headerTopRight {
+                    width: 126px;
+                    height: 32px;
+                    position: relative;
+
+                    .notice {
+                        width: 55px;
+                        padding-left: 26px;
+                        height: 100%;
+                        background: url("../img/home/notice.png") no-repeat scroll 0px center;
+
+                        a {
+                            display: inline-block;
+                            width: 55px;
+
+                            color: #808080;
+                        }
+                    }
+
+                    .icon1 {
+                        float: right;
+
+                        #wechat {
+                            color: #808080;
+
+                            img {
+                                border: 0;
+                                vertical-align: middle;
+                            }
+
+                            .wexin {
+                                width: 148px;
+                                height: 168px;
+                                background: #fff;
+                                display: none;
+                                position: absolute;
+                                right: 0;
+                                border: 1px solid #ddd;
+                                z-index: 100;
+
+                                img {
+                                    border: 0;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+
+                        .weibo {
+                            display: inline-block;
+                            width: 20px;
+                            height: 25px;
+                        }
+
+                    }
+                }
+
+                .headerTopLeft {
+                    min-width: 240px;
+                    height: 32px;
+                    line-height: 32px;
+
+                    span {
+                        a {
+                            color: #808080;
+                        }
+                    }
+
+                    .welcome {}
+
+                    .user {
+                        a {
+                            padding-right: 7px;
+                        }
+                    }
+
+                    .myorder {
+                        padding-right: 14px;
+                    }
+                }
+            }
+        }
+
+        .headerMiddle {
+            height: 62px;
+            margin-top: 20px;
+
+            .vanclSearch {
+                width: 438px;
+                height: 60px;
+                padding-top: 8px;
+
+                .searchTab {
+                    height: 30px;
+
+                    .search {
+                        #searchTxt {
+                            width: 249px;
+                            height: 27px;
+                            padding: 0 5px;
+                            line-height: 27px;
+                            border: 1px solid #c9caca;
+                        }
+
+                        #searchBtn {
+                            width: 49px;
+                            height: 29px;
+                            border: none;
+                            cursor: pointer;
+                            background: url("../img/home/vanclsprite.png") no-repeat -100px 0px;
+                        }
+                    }
+
+                    .shoppingCart {
+                        width: 105px;
+                        height: 27px;
+                        line-height: 27px;
+                        border: 1px solid #c1383e;
+                        background: url("../img/home/vanclsprite.png") no-repeat scroll -154px 0px;
+                        position: relative;
+                        z-index: 10;
+
+                        a {
+                            padding-left: 29px;
+                            padding-top: 6px;
+                            font-size: 12px;
+                            color: #fff;
+                        }
+
+                        .certshow {
+                            position: absolute;
+                            width: 328px;
+                            height: 298px;
+                            border: 1px solid #b81c22;
+                            z-index: 100;
+                            left: -224px;
+                            background-color: #fff;
+                            color: #727171;
+
+                            .certbox {
+                                width: 286px;
+                                height: 268px;
+                                margin: 20px;
+
+                                p {
+                                    border-bottom: 1px solid #ececec;
+                                }
+
+                                .certgoods {
+                                    height: 208px;
+                                    overflow: hidden;
+
+                                    .certbottom {
+                                        height: 40px;
+                                        border-top: 1px solid #ececec;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .headerBottom {
+            height: 46px;
+
+            .logo {
+                width: 185px;
+                height: 46px;
+                background: url("../img/home/logo18546.png");
+                cursor: pointer;
+            }
+
+            /*一级导航*/
+            .nav {
+                >ul {
+
+                    /*公共样式*/
+                    @mixin navLi {
+                        float: left;
+                        width: 99px;
+                        margin-top: 20px;
+                        height: 100%;
+                        text-align: center;
+                        position: relative;
+                    }
+
+                    @mixin navLiA {
+                        display: block;
+                        font-size: 16px;
+                        color: #727171;
+                        position: relative;
+                        padding-bottom: 5px;
+
+                    }
+
+                    &>li {
+                        @include navLi;
+
+
+                        // &:hover .menu {
+                        //     border-top: 5px solid #b81c22 !important;
+                        //     display: block;
+
+                        // }
+
+                        &>a {
+                            @include navLiA;
+
+                            &:after {
+                                content: "|";
+                                height: 12px;
+                                color: #888888;
+                                float: right;
+                            }
+
+                            &:hover {
+                                color: #a10000;
+                            }
+                        }
+
+                        /*二级导航*/
+                        .menu {
+                            display: none;
+                            box-sizing: border-box;
+                            border: 1px solid #ccc;
+                            background: #fff;
+                            width: 99px;
+                            position: absolute;
+                            z-index: 100;
+                            overflow: hidden;
+
+
+
+                            li {
+                                @include navLi;
+
+                                a {
+                                    @include navLiA;
+
+                                    &:hover {
+                                        color: #a10000;
+                                    }
+                                }
+                            }
+                        }
+
+                        .down {
+                            border-top: 5px solid #b81c22 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+
+    /*-------------main-------------*/
+    .main {
+
+        /*轮播图*/
+        .banner {
+            width: 100%;
+            height: 535px;
+            margin: 30px auto 0;
+
+            .carousel {
+                width: 100%;
+                height: 535px;
+                overflow: hidden;
+                position: relative;
+
+                /*图片*/
+                .image_reel {
+                    width: 100%;
+                    height: 535px;
+
+                    li {
+                        position: absolute;
+                        height: 100%;
+                    }
+                }
+
+                /*圆点*/
+                .paging {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 50%;
+
+                    span {
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: #dddddd;
+                        margin-left: 10px;
+                        cursor: pointer;
+                    }
+                }
+
+                /*next prew*/
+                .change {
+                    .previous {
+                        .arrow {
+                            display: block;
+                            width: 18px;
+                            height: 54px;
+                            position: absolute;
+                            margin-top: -27px;
+                            top: 50%;
+
+                            z-index: 10;
+
+                        }
+
+                        .arrowleft {
+                            left: 10px;
+                            background: url("../img/home/focus_lr0918.png") no-repeat;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}

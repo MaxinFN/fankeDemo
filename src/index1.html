@@ -1,10 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>主页</title>
+    <link rel="stylesheet" href="../src/css/base.css">
+    <link rel="stylesheet" href="../src/css/index.css">
+    <script src="../src/lib/jquery-3.4.1.js"></script>
+    <script src="../src/js/common.js"></script>
+    <script src="../src/js/index.js"></script>
 </head>
+
 <body>
-    <h1>主页</h1>
+    <!-- <h1>主页</h1> -->
+    <div id="fanke">
+        <!-- header -->
+        <div class="header">
+            <div class="headerArea">
+                <div class="headerTop">
+                    <div class="container">
+                        <div class="headerTopRight fr">
+                            <div class="notice fl">
+                                <a href="###">网站公告</a>
+                            </div>
+                            <div class="fl icon1">
+                                <a href="###" id="wechat">
+                                    <img src="../src/img/home/w1.jpg" alt="微信">
+                                    <div class="wexin">
+                                        <img src="../src/img/home/weixin.png" alt="">
+                                    </div>
+                                </a>
+                                <a href="###" class="weibo">
+                                    <img src="../src/img/home/w2.jpg" alt="微博">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="headerTopLeft fr">
+                            <span class="welcome">您好,
+                                <em>欢迎光临凡客诚品！</em>
+                            </span>
+                            <span class="user">
+                                <a href="###">登录</a>|&nbsp;
+                                <a href="###">注册</a>
+                            </span>
+                            <span class="myorder">
+                                <a href="###">我的订单</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerMiddle">
+                <div class="container">
+                    <div class="vanclSearch fr">
+                        <div class="searchTab">
+                            <div class="search fl">
+                                <input type="text" placeholder="搜“熊本熊”，体验与众不同" id="searchTxt">
+                                <input type="button" id="searchBtn">
+                            </div>
+                            <div class="shoppingCart fr">
+                                <a href="###">
+                                    购物车(
+                                    <span class="totals_car">1 </span> )
+                                </a>
+                                <div class="certshow" style="display: none">
+                                    <div class="certbox">
+                                        <p>最近加入的商品</p>
+                                        <ul class="certgoods">
+                                            <!-- <li class="clearfix">
+                                                        <img src="img/indeximg/shirt001.jpg" class="fl" alt="">
+                                                        <div class="goodsin fl">
+                                                            <div>
+                                                                <a href="">T恤 简鱼 牛肉干 白色</a>
+                                                            </div>
+                                                            <span class="fl">￥
+                                                                <em class="simple">58.00</em> ×
+                                                                <em class="jianum">1</em>
+                                                            </span>
+                                                        </div>
+                                                        <a href="" class="colors del">删除</a>
+                                                    </li> -->
+                                        </ul>
+                                        <div class="certbottom">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerBottom">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="logo fl">
+                    </div>
+                    <!-- 导航 -->
+                    <div class="nav fr">
+                        <ul>
+                            <li>
+                                <a href="###">首页</a>
+                            </li>
+                            <li>
+                                <a href="###">衬衫
+                                    <em class="hot"></em>
+                                </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">免烫</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">易打理</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">休闲</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">高支</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">法兰绒</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">牛津纺</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">青年布</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">牛仔</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">麻</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">水洗棉</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">泡泡纱</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">商务衬衫</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">T恤
+                                    <em class="new"></em>
+                                </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">本广</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">李翔伟</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">张广先</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">药</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">长场雄</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">创可贴</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">周南</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">山鸟叔</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">简鱼</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">欧飞鸿</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">好小猪</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">剪纸猪</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">赵老师的猪</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">熊本熊</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">水柔棉T</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">运动T恤</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">POLO</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">莫代尔T</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">卫衣</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">熊本熊</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">开衫</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">连帽</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">圆领</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">水柔棉</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">外套</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">运动户外</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">皮肤衣</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">西服</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">C9设计款</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">夹克</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">nautilus</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">大衣</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">羽绒服</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">针织衫</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">空调衫</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">棉线衫</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">羊毛衫</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">裤装</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">针织裤</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">休闲裤</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">牛仔裤</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">运动裤</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">沙滩裤</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">鞋</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">复古跑鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">帆布鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">休闲鞋</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">家居配饰</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="###">手机壳</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">床上套件</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">被子</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">枕</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">家居服</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">家居鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">背提包</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">拉杆箱</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">皮带钱包</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">帽子</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">毛巾</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">内衣袜品</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="###">特惠</a>
+                                <ul class="menu">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main -->
+        <div class="main">
+            <!-- 轮播图 -->
+            <div class="banner">
+                <div class="container">
+                    <div class="carousel" id="zz_carousel">
+                        <!--图片容器，移动的元素-->
+                        <ul class="image_reel">
+                            <li style="z-index: 2; opacity: 1;">
+                                <a href=" javascript:; ">
+                                    <img src="img/indeximg/banner1.jpg " alt=" ">
+                                </a>
+                            </li>
+                            <li style="z-index: 3; opacity: 1;">
+                                <a href="javascript:; ">
+                                    <img src="img/indeximg/banner2.jpg " alt=" ">
+                                </a>
+                            </li>
+                            <li style="z-index: 4; opacity: 1;">
+                                <a href="javascript:; ">
+                                    <img src="img/indeximg/banner3.jpg " alt=" ">
+                                </a>
+                            </li>
+                            <li style="z-index: 0; opacity: 1;">
+                                <a href="javascript:; ">
+                                    <img src="img/indeximg/banner4.jpg " alt=" ">
+                                </a>
+                            </li>
+                            <li style="z-index: 1; opacity: 1;">
+        
+                                <a href="javascript:; ">
+                                    <img src="img/indeximg/banner5.jpg " alt=" ">
+                                </a>
+                            </li>
+                        </ul>
+                        <!--图片下方的小圆点,js动态添加-->
+                        <div class="paging " style="margin-left: -55px; z-index: 10;">
+        
+                            <span class=""></span><span class=""></span><span class="active"></span><span class=""></span><span
+                                class=""></span></div>
+                        <!--左右控制按钮-->
+                        <div class="change ">
+                            <sapn class="previous ">
+                                <a href="###" class="arrow arrowleft"></a>
+                            </sapn>
+                            <span class="next ">
+                                <a href="###" class="arrow arrowright"></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+            <!-- 优惠广告 -->
+            <div class="getmoney ">
+                <div class="container ">
+                    <a href=" ">
+                        <img src="img/indeximg/banner_getmoney.jpg" alt=" ">
+                    </a>
+                </div>
+            </div>
+            <div class="gettime ">
+                <div class="container ">
+                    <div class="timecount ">
+                        <span>秒杀进行中,距结束还有
+                            <em>00</em>
+                            <em>00</em>
+                            <em>00</em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- t恤展示区 -->
+            <div class="show_t ">
+                <div class="container ">
+                    <ul class="show_list ">
+                        <!-- <li>
+                                <a href="###">
+                                    <img src="img/indeximg/show_t1.jpg " alt="凡客T恤 药 傻子药 浅花灰色 ">
+                                </a>
+                                <div class="goods_descript">
+                                    <a href=" ">T恤 顾湘 白色</a>
+                                </div>
+                                <div class="price ">
+                                    <p class="price1 ">¥
+                                        <span class="original_price ">118</span>
+                                    </p>
+                                    <p>
+                                        <span class="current_price fl ">¥
+                                            <em>38</em>
+                                        </span>
+                                        <span class="afterdeposit fr ">充值后
+                                            <em>19</em> 元</span>
+                                    </p>
+                                </div>
+                            </li> -->
+                    </ul>
+                </div>
+            </div>
+            <!-- 查看更多 -->
+            <div class="more ">
+                <div class="container ">
+                    <img src="img/indeximg/more.jpg " alt=" ">
+                </div>
+            </div>
+            <!-- 降价 -->
+            <div class="depreciate  clearfix">
+                <div class="container ">
+                    <ul class="listshirt clearfix">
+                        <!-- <li>
+                                    <a href=" ">
+                                        <img src="img/indeximg/2.jpg " alt=" ">
+                                    </a>
+                                </li> -->
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="recomment ">
+                <div class="container ">
+                    <h2>优选推荐</h2>
+                    <div class="tuijian clearfix">
+                        <!-- <ul class="pic_list ">
+                                    <li class="pic_one ">
+                                        <a href=" ">
+                                            <img src="img/indeximg/img_pic1.jpg " alt=" ">
+                                        </a>
+                                        <h3>
+                                            <span>充值购买更优惠</span>
+                                            4.0日式免烫衬衫
+                                        </h3>
+                                    </li>
+                                    <li class="pic_two ">
+                                        <div class="pic_twotop ">
+                                            <a href=" ">
+                                                <img src="img/indeximg/img_pic2.jpg " alt=" ">
+                                            </a>
+                                            <h3>
+                                                <span>充值购买更优惠</span>
+                                                4.0日式免烫衬衫
+                                            </h3>
+                                        </div>
+                                        <div class="pic_twobottom ">
+                                            <a href=" ">
+                                                <img src="img/indeximg/img_pic2.jpg " alt=" ">
+                                            </a>
+                                            <h3>
+                                                <span>充值购买更优惠</span>
+                                                4.0日式免烫衬衫
+                                            </h3>
+                                        </div>
+                                    </li>
+                                    <li class="pic_three ">
+                                        <img src="img/indeximg/img_picthree.jpg " alt=" ">
+                                        <h3>
+                                            <span>全棉舒适素色T</span>
+                                            充值购买相当于&nbsp; 19元
+                                        </h3>
+                                    </li>
+                                </ul> -->
+                    </div>
+                </div>
+            </div>
+            <div class="pants">
+                <div class="container">
+                    <h2>下装推荐</h2>
+                    <div class="pic_pants clearfix">
+                        <ul class="pantsquan clearfix">
+                            <!-- <li class="pic_three ">
+                                        <img src="img/indeximg/pic_pants1.jpg " alt=" ">
+                                        <h3>
+                                            <span>全棉舒适素色T</span>
+                                            充值购买相当于&nbsp; 19元
+                                        </h3>
+                                    </li> -->
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="quality_goods">
+                <div class="container">
+                    <h2>更多精品</h2>
+                    <ul class="geocy clearfix">
+                        <!-- <li>
+                                    <a href="###">
+                                        <img src="img/indeximg/more_goods1.jpg " alt=" ">
+                                    </a>
+                                </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="about">
+                <ul class="abouthelp">
+                    <li>
+                        <a href=" ">
+                            <img src="img/indeximg/onlinecustomer.png " alt=" ">
+                        </a>
+                        <p class="onlinetime "> 7X9小时在线客服</p>
+                    </li>
+                    <li>
+                        <a href=" ">
+                            <img src="img/indeximg/seven.png " alt=" ">
+                        </a>
+                        <p> 7天内退货</p>
+                        <p> 购物满199元免运费</p>
+        
+                    </li>
+                    <li>
+                        <a href="###">
+                            <img src="img/indeximg/fanke_code.jpg " alt=" ">
+                        </a>
+                        <p> 扫描下载
+                            <em>凡客</em>客户端</p>
+                    </li>
+                </ul>
+                <div class="other ">
+                    <ul class="otherhelp ">
+                        <li>
+                            <a href=" ">关于凡客</a>
+                        </li>
+                        <li>
+                            <a href=" ">新手指南</a>
+                        </li>
+                        <li>
+                            <a href=" ">配送范围及时间</a>
+                        </li>
+                        <li>
+                            <a href=" ">支付方式</a>
+                        </li>
+                        <li>
+                            <a href=" ">售后服务</a>
+                        </li>
+                        <li>
+                            <a href=" ">帮助中心</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
+    </div>
 </body>
+
 </html>
