@@ -18,6 +18,7 @@ body {
   font-size: 12px
   /*-------------头部-------------*/
   /*-------------main-------------*/
+  /*-------------底部-------------*/
 }
 #fanke .header {
   height: 167px;
@@ -227,6 +228,28 @@ body {
 }
 #fanke .main {
   /*轮播图*/
+  /*广告*/
+  /*查看更多*/
+  /*降价*/
+  /*优选推荐*/
+  /*下装推荐*/
+  /*更多精品*/
+  /*about*/
+}
+#fanke .main h2 {
+  font-size: 18px;
+  color: #9a9a9a;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Microsoft YaHei";
+  margin: 30px 0;
+}
+#fanke .main h3 {
+  height: 28px;
+  margin: 20px 10px;
+  line-height: 28px;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
 }
 #fanke .main .banner {
   width: 100%;
@@ -264,7 +287,7 @@ body {
   margin-left: 10px;
   cursor: pointer;
 }
-#fanke .main .banner .carousel .change .previous .arrow {
+#fanke .main .banner .carousel .change .arrow {
   display: block;
   width: 18px;
   height: 54px;
@@ -276,4 +299,336 @@ body {
 #fanke .main .banner .carousel .change .previous .arrowleft {
   left: 10px;
   background: url("../img/home/focus_lr0918.png") no-repeat;
+}
+#fanke .main .banner .carousel .change .next .arrowright {
+  right: 10px;
+  background: url("../img/home/focus_lr0918.png") no-repeat -60px 0px;
+}
+#fanke .main .getmoney {
+  height: 69px;
+  margin: 40px auto 20px;
+}
+#fanke .main .getmoney img {
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .main .gettime .container {
+  height: 64px;
+  background: url("../img/home/timer.jpg");
+  background-size: contain;
+  position: relative;
+}
+#fanke .main .gettime .container .timecount {
+  width: 400px;
+  height: 64px;
+  position: absolute;
+  right: 8px;
+}
+#fanke .main .gettime .container .timecount span {
+  display: block;
+  width: 400px;
+  line-height: 64px;
+  color: #fff;
+  font-size: 20px;
+}
+#fanke .main .gettime .container .timecount span em {
+  color: #a10000;
+  margin-left: 8px;
+  float: right;
+  padding-right: 30px;
+}
+#fanke .main .show_t {
+  width: 100%;
+  color: #474747;
+  margin-top: 10px;
+  height: 327px;
+}
+#fanke .main .show_t .show_list li {
+  float: left;
+  width: 232px;
+  height: 100%;
+  margin-right: 10px;
+}
+#fanke .main .show_t .show_list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#fanke .main .show_t .show_list li a img {
+  width: 232px;
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .main .show_t .show_list li .goods_descript {
+  font-size: 16px;
+  margin-top: 10px;
+  height: 45px;
+  font-weight: normal;
+}
+#fanke .main .show_t .show_list li .goods_descript a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #474747;
+}
+#fanke .main .show_t .show_list li .price {
+  margin-bottom: 14px;
+}
+#fanke .main .show_t .show_list li .price:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+#fanke .main .show_t .show_list li .price span {
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+}
+#fanke .main .show_t .show_list li .price .price1 {
+  height: 20px;
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #d3d3d3
+  /*span*/
+}
+#fanke .main .show_t .show_list li .price p .current_price {
+  color: #bb2b34;
+}
+#fanke .main .show_t .show_list li .price p .afterdeposit {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Microsoft YaHei";
+}
+#fanke .main .show_t .show_list li .price p .afterdeposit em {
+  color: #bb2b34;
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: bolder;
+}
+#fanke .main .show_t .show_list li:last-child {
+  margin-right: 0;
+}
+#fanke .main .more {
+  margin-top: 10px;
+}
+#fanke .main .more img {
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .main .depreciate {
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+#fanke .main .depreciate .listshirt li {
+  float: left;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+#fanke .main .depreciate .listshirt li img {
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .main .depreciate .listshirt li:nth-child(4n) {
+  margin-right: 0;
+}
+#fanke .main .recomment h2 {
+  font-size: 18px;
+  text-align: center;
+  margin: 30px 0;
+  font-family: "Microsoft YaHei";
+  color: #9a9a9a;
+  font-size: 18px;
+}
+#fanke .main .recomment .tuijian .pic_list {
+  height: 507px;
+  margin-bottom: 20px;
+}
+#fanke .main .recomment .tuijian .pic_list li {
+  float: left;
+}
+#fanke .main .recomment .tuijian .pic_list img {
+  width: 100%;
+  height: 100%;
+}
+#fanke .main .recomment .tuijian .pic_list span {
+  float: right;
+  color: #a10000;
+  font-family: Arial;
+  line-height: 24px;
+  font-size: 14px;
+}
+#fanke .main .recomment .tuijian .pic_list .pic_one {
+  width: 590px;
+  margin-right: 17px;
+  border: 1px solid #e8e7ec;
+}
+#fanke .main .recomment .tuijian .pic_list .pic_two {
+  width: 290px;
+  margin-right: 17px;
+}
+#fanke .main .recomment .tuijian .pic_list .pic_two .pic_twotop {
+  border: 1px solid #e8e7ec;
+}
+#fanke .main .recomment .tuijian .pic_list .pic_two .pic_twobottom {
+  border: 1px solid #e8e7ec;
+  margin-top: 10px;
+}
+#fanke .main .recomment .tuijian .pic_list .pic_three {
+  width: 284px;
+  border: 1px solid #e8e7ec;
+  box-sizing: border-box;
+}
+#fanke .main .recomment .tuijian .pic_list .pic_three img {
+  width: 100%;
+  height: 440px;
+}
+#fanke .main .pants .pic_pants .pantsquan li {
+  float: left;
+  margin-right: 17px;
+}
+#fanke .main .pants .pic_pants .pantsquan li:last-child {
+  margin-right: 0;
+}
+#fanke .main .pants .pic_pants .pantsquan .pic_three {
+  width: 284px;
+  border: 1px solid #e8e7ec;
+  box-sizing: border-box;
+}
+#fanke .main .pants .pic_pants .pantsquan .pic_three img {
+  width: 100%;
+  height: 440px;
+}
+#fanke .main .pants .pic_pants .pantsquan .pic_three h3 span {
+  float: right;
+  font-size: 14px;
+  color: #a10000;
+  font-family: Arial;
+  line-height: 24px;
+}
+#fanke .main .quality_goods .geocy li {
+  float: left;
+  margin: 0px 22px 28px 0px;
+}
+#fanke .main .quality_goods .geocy li:nth-child(3n) {
+  margin-right: 0;
+}
+#fanke .main .about {
+  width: 1118px;
+  height: 282px;
+  margin: 80px auto;
+  padding: 0px 40px 0px;
+  border: 1px solid #e0e0e1;
+  font-family: "Microsoft YaHei";
+  margin-bottom: 25px;
+  box-sizing: content-box;
+}
+#fanke .main .about .abouthelp {
+  margin: 33px 0px 23px;
+  height: 138px;
+}
+#fanke .main .about .abouthelp li {
+  float: left;
+  width: 370px;
+  height: 138px;
+  border-right: 1px solid #e0e0e1;
+  margin-right: 0px;
+  text-align: center;
+}
+#fanke .main .about .abouthelp li p {
+  height: 26px;
+  line-height: 26px;
+}
+#fanke .main .about .abouthelp li a .onlinetime {
+  margin: 0 auto;
+  width: 156px;
+  font-size: 14px;
+  background: #b81c22;
+  color: #ffffff;
+}
+#fanke .main .about .abouthelp li img {
+  margin-bottom: 20px;
+}
+#fanke .main .about .abouthelp li:last-child {
+  border-right: 0px;
+}
+#fanke .main .about .abouthelp li:last-child img {
+  width: 104px;
+  height: 104px;
+}
+#fanke .main .about .other .otherhelp {
+  height: 54px;
+  background: #f8f8f8;
+  width: 100%;
+}
+#fanke .main .about .other .otherhelp li {
+  float: left;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 15px;
+  border-right: 1px solid #dadadb;
+}
+#fanke .main .about .other .otherhelp li:last-child {
+  border-right: none;
+}
+#fanke .main .about .other .otherhelp li a {
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 65px;
+  color: #323232;
+}
+#fanke .footer {
+  height: 136px;
+  font-size: 10px;
+  color: #3e3a39;
+}
+#fanke .footer .footertop {
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+  border-top: 1px solid #3e3a39;
+  margin-bottom: 20px;
+}
+#fanke .footer .footertop p:nth-child(1) {
+  margin-top: 10px;
+}
+#fanke .footer .footerbottom {
+  width: 760px;
+  margin: auto;
+  height: 48px;
+}
+#fanke .footer .footerbottom span {
+  margin: 0 10px;
+}
+#fanke .footer .footerbottom span a {
+  display: inline-block;
+  height: 45px;
+}
+#fanke .footer .footerbottom span:nth-child(1) a {
+  width: 113px;
+  background: url("../img/home/spritesbgtop.png") no-repeat 0 -581px;
+}
+#fanke .footer .footerbottom span:nth-child(2) a {
+  width: 156px;
+  background: url("../img/home/spritesbgtop.png") no-repeat 0 -629px;
+}
+#fanke .footer .footerbottom span:nth-child(3) a {
+  width: 96px;
+  background: url("../img/home/spritesbgtop.png") no-repeat 0 -675px;
+}
+#fanke .footer .footerbottom span:nth-child(4) a {
+  width: 101px;
+  background: url("../img/home/spritesbgtop.png") no-repeat -97px -675px;
+}
+#fanke .footer .footerbottom span:nth-child(5) a {
+  width: 42px;
+  background: url("../img/home/spritesbgtop.png") no-repeat -202px -675px;
+}
+#fanke .footer .footerbottom span:nth-child(6) a {
+  width: 120px;
+  background: url("../img/home/cctv.png") no-repeat left center;
+  background-size: contain;
 }
