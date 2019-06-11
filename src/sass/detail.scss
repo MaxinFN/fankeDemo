@@ -1,0 +1,456 @@
+@charset "utf-8";
+
+.container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#fanke {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+
+    /*-------------头部-------------*/
+    .header {
+        height: 167px;
+        background-color: #fff;
+
+        .headerArea {
+            .headerTop {
+                height: 32px;
+                background-color: #f7f7f7;
+                border-bottom: 1px solid #ccc;
+                color: #808080;
+                line-height: 32px;
+
+                .headerTopRight {
+                    width: 126px;
+                    height: 32px;
+                    position: relative;
+
+                    .notice {
+                        width: 55px;
+                        padding-left: 26px;
+                        height: 100%;
+                        background: url("../img/home/notice.png") no-repeat scroll 0px center;
+
+                        a {
+                            display: inline-block;
+                            width: 55px;
+
+                            color: #808080;
+                        }
+                    }
+
+                    .icon1 {
+                        float: right;
+
+                        #wechat {
+                            color: #808080;
+
+                            img {
+                                border: 0;
+                                vertical-align: middle;
+                            }
+
+                            .wexin {
+                                width: 148px;
+                                height: 168px;
+                                background: #fff;
+                                display: none;
+                                position: absolute;
+                                right: 0;
+                                border: 1px solid #ddd;
+                                z-index: 100;
+
+                                img {
+                                    border: 0;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+
+                        .weibo {
+                            display: inline-block;
+                            width: 20px;
+                            height: 25px;
+                        }
+
+                    }
+                }
+
+                .headerTopLeft {
+                    min-width: 240px;
+                    height: 32px;
+                    line-height: 32px;
+
+                    span {
+                        a {
+                            color: #808080;
+                        }
+                    }
+
+                    .welcome {}
+
+                    .user {
+                        a {
+                            padding-right: 7px;
+                        }
+                    }
+
+                    .myorder {
+                        padding-right: 14px;
+                    }
+                }
+            }
+        }
+
+        .headerMiddle {
+            height: 62px;
+            margin-top: 20px;
+
+            .vanclSearch {
+                width: 438px;
+                height: 60px;
+                padding-top: 8px;
+
+                .searchTab {
+                    height: 30px;
+
+                    .search {
+                        #searchTxt {
+                            width: 249px;
+                            height: 27px;
+                            padding: 0 5px;
+                            line-height: 27px;
+                            border: 1px solid #c9caca;
+                        }
+
+                        #searchBtn {
+                            width: 49px;
+                            height: 29px;
+                            border: none;
+                            cursor: pointer;
+                            background: url("../img/home/vanclsprite.png") no-repeat -100px 0px;
+                        }
+                    }
+
+                    .shoppingCart {
+                        width: 105px;
+                        height: 27px;
+                        line-height: 27px;
+                        border: 1px solid #c1383e;
+                        background: url("../img/home/vanclsprite.png") no-repeat scroll -154px 0px;
+                        position: relative;
+                        z-index: 10;
+
+                        a {
+                            padding-left: 29px;
+                            padding-top: 6px;
+                            font-size: 12px;
+                            color: #fff;
+                        }
+
+                        .certshow {
+                            position: absolute;
+                            width: 328px;
+                            height: 298px;
+                            border: 1px solid #b81c22;
+                            z-index: 100;
+                            left: -224px;
+                            background-color: #fff;
+                            color: #727171;
+
+                            .certbox {
+                                width: 286px;
+                                height: 268px;
+                                margin: 20px;
+
+                                p {
+                                    border-bottom: 1px solid #ececec;
+                                }
+
+                                .certgoods {
+                                    height: 208px;
+                                    overflow: hidden;
+
+                                    .certbottom {
+                                        height: 40px;
+                                        border-top: 1px solid #ececec;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .headerBottom {
+            height: 46px;
+
+            .logo {
+                width: 185px;
+                height: 46px;
+                background: url("../img/home/logo18546.png");
+                cursor: pointer;
+            }
+
+            /*一级导航*/
+            .nav {
+                >ul {
+
+                    /*公共样式*/
+                    @mixin navLi {
+                        float: left;
+                        width: 99px;
+                        margin-top: 20px;
+                        height: 100%;
+                        text-align: center;
+                        position: relative;
+                    }
+
+                    @mixin navLiA {
+                        display: block;
+                        font-size: 16px;
+                        color: #727171;
+                        position: relative;
+                        padding-bottom: 5px;
+
+                    }
+
+                    &>li {
+                        @include navLi;
+
+
+                        // &:hover .menu {
+                        //     border-top: 5px solid #b81c22 !important;
+                        //     display: block;
+
+                        // }
+
+                        &>a {
+                            @include navLiA;
+
+                            &:after {
+                                content: "|";
+                                height: 12px;
+                                color: #888888;
+                                float: right;
+                            }
+
+                            &:hover {
+                                color: #a10000;
+                            }
+                        }
+
+                        /*二级导航*/
+                        .menu {
+                            display: none;
+                            box-sizing: border-box;
+                            border: 1px solid #ccc;
+                            background: #fff;
+                            width: 99px;
+                            position: absolute;
+                            z-index: 100;
+                            overflow: hidden;
+
+
+
+                            li {
+                                @include navLi;
+
+                                a {
+                                    @include navLiA;
+
+                                    &:hover {
+                                        color: #a10000;
+                                    }
+                                }
+                            }
+                        }
+
+                        .down {
+                            border-top: 5px solid #b81c22 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    /*-------------main-------------*/
+    .main {
+        height: 700px;
+
+        .render {
+            overflow: hidden;
+            width: 100%;
+
+            .ProductTitleShow {
+                margin-top: 36px;
+                overflow: hidden;
+
+                .location {
+                    a {
+                        display: inline-block;
+                        color: #333;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .censhan {
+                    font-size: 18px;
+                    color: #333;
+                    font-weight: bold;
+                    line-height: 32px;
+                }
+
+                .ProductSubnav {
+                    a {
+                        color: #808080;
+                        padding: 0 20px;
+                    }
+                }
+            }
+
+            .detail {
+                height: 475px;
+                border-top: 1px solid #e5e6e6;
+                border-bottom: 1px solid #e5e6e6;
+
+                &>div {
+                    margin-top: 36px;
+                    margin-right: 80px;
+                }
+
+                ul {
+                    position: relative;
+                }
+
+                .detailleft {
+                    width: 70px;
+                    height: 100%;
+
+                    .imglist {
+                        li {
+                            width: 70px;
+                            height: 70px;
+                            margin-bottom: 11px;
+                            border: 1px solid rgb(180, 180, 180);
+
+                            &:nth-child(1) {
+                                border: 1px solid rgb(161, 0, 0);
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+
+                            }
+                        }
+                    }
+                }
+
+                .detailcenter {
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #e5e6e6;
+                    position: relative;
+
+                    .minImg {
+                        width: 400px;
+                        height: 400px;
+
+                        li {
+                            position: absolute;
+                            top: 0;
+                            z-index: 1;
+                        }
+                    }
+
+                    // 少了些样式
+                    .maglify {
+                        width: 440px;
+                        height: 400px;
+                        border: 1px solid #000;
+                        top: -430px;
+                        left: 404px;
+                        background: #fff;
+                        overflow: hidden;
+
+                        li {
+                            position: absolute;
+                        }
+
+                        img {
+                            width: 800px;
+                            height: 800px;
+                        }
+                    }
+                }
+
+                .detailright {
+                    width: 450px;
+                    height: 100%;
+                    position: relative;
+
+                    &>div {
+                        margin-top: 20px;
+                    }
+
+                    .good {
+                        color: #a10000;
+
+                        span {
+                            font-size: 18px;
+
+                        }
+                    }
+
+                    .color {
+                        ul {
+                            li {
+                                float: left;
+                                width: 97px;
+                                height: 42px;
+                                background: #fff;
+                                line-height: 42px;
+                                margin-right: 8px;
+                                text-align: center;
+                                color: #333;
+                                cursor: pointer;
+
+                                &:first {
+                                    border: 1px solid rgb(161, 0, 0);
+                                }
+                            }
+                        }
+                    }
+
+                    .size {
+                        ul {
+                            li {
+                                float: left;
+                                padding: 0 9px;
+                                background: #fff;
+                                color: #333;
+                                cursor: pointer;
+                                height: 24px;
+                                line-height: 22px;
+                                margin-right: 5px;
+                                margin-bottom: 5px;
+                                text-align: center;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

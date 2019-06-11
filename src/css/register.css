@@ -12,6 +12,9 @@
   padding: 0 0 10px 0;
   border-bottom: 1px solid #919191;
 }
+#top .logoLink {
+  cursor: pointer;
+}
 
 /* ------------表单------------ */
 #form:after {

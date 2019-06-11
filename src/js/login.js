@@ -1,4 +1,9 @@
 $(function () {
+    // 跳转主页
+    $(".logoLink").on("click", function () {
+        location.href = "../index1.html"
+    })
+
     // 跳转注册
     $(".reg").on("click", function () {
         location.href = "../html/register.html";

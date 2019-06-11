@@ -19,6 +19,7 @@ body {
   /*-------------头部-------------*/
   /*-------------main-------------*/
   /*-------------底部-------------*/
+  /*-------------侧边栏-------------*/
 }
 #fanke .header {
   height: 167px;
@@ -631,4 +632,57 @@ body {
   width: 120px;
   background: url("../img/home/cctv.png") no-repeat left center;
   background-size: contain;
+}
+#fanke .BayWindow {
+  width: 73px;
+  box-sizing: border-box;
+  height: 205px;
+  background: #fff;
+  border: 1px solid #b81b22;
+  margin-bottom: 30px;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  z-index: 10;
+}
+#fanke .BayWindow ul .downApp {
+  height: 76px;
+}
+#fanke .BayWindow ul .online {
+  height: 71px;
+}
+#fanke .BayWindow ul .totop {
+  border: none;
+  height: 56px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: #b81b22;
+  overflow: hidden;
+}
+#fanke .BayWindow ul .totop span {
+  display: block;
+  padding-top: 12px;
+}
+#fanke .BayWindow ul .totop a {
+  font-family: "宋体";
+  font-weight: bolder;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+}
+#fanke .BayWindow ul li {
+  width: 73px;
+  border-bottom: 1px solid #b81b22;
+  cursor: pointer;
+  text-align: center;
+}
+#fanke .BayWindow ul li img {
+  margin-top: 14px;
+}
+#fanke .BayWindow ul li p {
+  line-height: 30px;
+}
+#fanke .BayWindow ul li p a {
+  color: #808080;
 }

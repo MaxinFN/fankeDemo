@@ -857,4 +857,76 @@ body {
             }
         }
     }
+
+    /*-------------侧边栏-------------*/
+    .BayWindow {
+        width: 73px;
+        box-sizing: border-box;
+        height: 205px;
+        background: #fff;
+        border: 1px solid #b81b22;
+        margin-bottom: 30px;
+
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        z-index: 10;
+
+
+        ul {
+            .downApp {
+                height: 76px;
+            }
+
+            .online {
+                height: 71px;
+            }
+
+            .totop {
+                border: none;
+                height: 56px;
+                text-align: center;
+                font-weight: bold;
+                color: #fff;
+                background: #b81b22;
+                overflow: hidden;
+
+                span {
+                    display: block;
+                    padding-top: 12px;
+                }
+
+                a {
+                    font-family: "宋体";
+                    font-weight: bolder;
+                    color: #fff;
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+            }
+
+            li {
+                width: 73px;
+                border-bottom: 1px solid #b81b22;
+                cursor: pointer;
+                text-align: center;
+
+                img {
+                    margin-top: 14px;
+                }
+
+                p {
+                    line-height: 30px;
+
+                    a {
+                        color: #808080;
+                    }
+                }
+
+
+
+
+            }
+        }
+    }
 }
