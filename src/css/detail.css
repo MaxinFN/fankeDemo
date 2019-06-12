@@ -316,7 +316,8 @@
   color: #a10000;
 }
 #fanke .main .render .detail .detailright .good span {
-  font-size: 18px;
+  font-size: 24px;
+  font-family: Tahoma;
 }
 #fanke .main .render .detail .detailright .color ul li {
   float: left;
@@ -328,8 +329,9 @@
   text-align: center;
   color: #333;
   cursor: pointer;
+  border: 1px solid #B4B4B4;
 }
-#fanke .main .render .detail .detailright .color ul li:first {
+#fanke .main .render .detail .detailright .color ul li:nth-child(1) {
   border: 1px solid #a10000;
 }
 #fanke .main .render .detail .detailright .size ul li {
@@ -343,4 +345,49 @@
   margin-right: 5px;
   margin-bottom: 5px;
   text-align: center;
+  border: 1px solid #C8C8C8;
+}
+#fanke .main .render .detail .detailright .size ul li:nth-child(1) {
+  border: 1px solid #a10000;
+}
+#fanke .main .render .detail .detailright .number .shopping input {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+#fanke .main .render .detail .detailright .number .shopping span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  float: left;
+  border: 1px solid #ccc;
+  text-align: center;
+  background: #ccc;
+  font-weight: bold;
+  cursor: pointer;
+}
+#fanke .main .render .detail .detailright .number .shopping .subtract {
+  border-right: none;
+}
+#fanke .main .render .detail .detailright .number .shopping .add {
+  border-right: none;
+}
+#fanke .main .render .detail .detailright .opera {
+  position: relative;
+}
+#fanke .main .render .detail .detailright .opera .buy {
+  background: #f7abaf;
+  color: #a50309;
+}
+#fanke .main .render .detail .detailright .opera .btn {
+  width: 166px;
+  height: 30px;
+  border: 1px solid #b71b21;
+  font-size: 14px;
+}
+#fanke .main .render .detail .detailright .opera .addcart {
+  background: #b81c22;
+  color: #fff;
 }
