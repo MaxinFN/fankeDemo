@@ -202,6 +202,7 @@ $(function () {
                     }
                     let obj = JSON.parse(str);
                     console.log(obj);
+                    
                     // 查询账号
                     if (obj.user == true) {
                         // 账号密码校验

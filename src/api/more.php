@@ -3,8 +3,8 @@ header('content-type:text/html;charset=utf-8');
 include 'conn.php';
 
 
-$sql = "SELECT *FROM goodsInfo WHERE oldprice IS NOT NULL";
- 
+$sql = "SELECT *FROM goodsInfo LIMIT 23,6";
+
 $res = $conn->query($sql);
 $content = $res->fetch_all(MYSQLI_ASSOC);
 

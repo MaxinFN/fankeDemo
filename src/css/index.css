@@ -485,6 +485,7 @@ body {
 #fanke .main .recomment .tuijian .pic_list .pic_three img {
   width: 100%;
   height: 440px;
+  cursor: pointer;
 }
 #fanke .main .pants .pic_pants .pantsquan li {
   float: left;

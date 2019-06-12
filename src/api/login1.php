@@ -30,7 +30,8 @@ if ($res2->num_rows == 1) {
     $arr['success'] = true;
 } else {
     // 登录不成功(密码错误)
-    $arr['success'] = false;
+    $arr['succe
+    ss'] = false;
 };
 
 if ($res3->num_rows > 0) {
