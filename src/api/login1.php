@@ -2,8 +2,8 @@
 header('content-type:text/html;charset=utf-8');
 include 'conn.php';
 
-$phone = isset($_POST["phone"]) ? $_POST["phone"] : '15627214523';
-$psw = isset($_POST["psw"]) ? $_POST["psw"] : '123123';
+$phone = isset($_POST["phone"]) ? $_POST["phone"] : '123';
+$psw = isset($_POST["psw"]) ? $_POST["psw"] : '123';
 
 $sql1 = "SELECT *FROM userInfo WHERE phone= $phone";
 $sql2 = "SELECT *FROM userInfo WHERE phone= $phone AND psw= $psw";
@@ -30,8 +30,7 @@ if ($res2->num_rows == 1) {
     $arr['success'] = true;
 } else {
     // 登录不成功(密码错误)
-    $arr['succe
-    ss'] = false;
+    $arr['success'] = false;
 };
 
 if ($res3->num_rows > 0) {

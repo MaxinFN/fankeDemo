@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../css/goodlist.css">
     <script src="../lib/jquery-3.4.1.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/detail.js"></script>
+    <script src="../js/goodslist.js"></script>
 </head>
 
 <body>
     <div id="fanke">
-        <!-- header -->
         <div class="header">
             <div class="headerArea">
                 <div class="headerTop">
@@ -67,18 +65,18 @@
                                         <p>最近加入的商品</p>
                                         <ul class="certgoods">
                                             <!-- <li class="clearfix">
-                                                            <img src="img/indeximg/shirt001.jpg" class="fl" alt="">
-                                                            <div class="goodsin fl">
-                                                                <div>
-                                                                    <a href="">T恤 简鱼 牛肉干 白色</a>
-                                                                </div>
-                                                                <span class="fl">￥
-                                                                    <em class="simple">58.00</em> ×
-                                                                    <em class="jianum">1</em>
-                                                                </span>
-                                                            </div>
-                                                            <a href="" class="colors del">删除</a>
-                                                        </li> -->
+                                                                    <img src="img/indeximg/shirt001.jpg" class="fl" alt="">
+                                                                    <div class="goodsin fl">
+                                                                        <div>
+                                                                            <a href="">T恤 简鱼 牛肉干 白色</a>
+                                                                        </div>
+                                                                        <span class="fl">￥
+                                                                            <em class="simple">58.00</em> ×
+                                                                            <em class="jianum">1</em>
+                                                                        </span>
+                                                                    </div>
+                                                                    <a href="" class="colors del">删除</a>
+                                                                </li> -->
                                         </ul>
                                         <div class="certbottom">
 
@@ -359,176 +357,223 @@
                 </div>
             </div>
         </div>
-        <!-- main -->
-        <div class="main">
+        <div class="showlistmain">
             <div class="container">
-                <div class="render">
-                    <div class="ProductTitleShow clearfix">
-                        <div class="location">
-                            <a href="javascript:;">
-                                首页
-                            </a> &nbsp;>&nbsp;
-                            <a href="javascript:;">
-                                男装
-                            </a>
-                            &nbsp; >&nbsp;
-                            <a href="javascript:;">
-                                衬衫
-                            </a>
-                        </div>
-                        <div class="fl censhan">衬衫</div>
-                        <div class="ProductSubnav fr">
-                            <span>
-                                <a href="###">产品描述</a>
-                            </span>
-                            <span>
-                                <a href="###">评论</a>
-                            </span>
-                            <span>
-                                <a href=" ### ">提问</a>
-                            </span>
+                <!-- 导引 -->
+                <div class="guide">
+                    <div class="nowposition fl">
+                        当前位置:
+                        <a href="javascript:;">所有分类</a>
+                    </div>
+                    <div class="findresult fr">
+                        找到和
+                        <a href="javascript:;">&nbsp;免烫&nbsp;</a>相关商品 &nbsp;
+                        <a href="javascript:;" class="kunnum">&nbsp;26&nbsp;</a>款
+                    </div>
+                </div>
+                <div class="selectarea">
+                    <div class="cloth fl">服装</div>
+                    <ul class="fl aboutcloth">
+                        <li>男装
+                            <span class="kunnum"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 固定导航 -->
+                <div class="allgoods" style="position: static; top: 0px; z-index: 10;">
+                    <div class="all">
+                        <a href="">全部商品</a>
+                    </div>
+                    <div class="goodsnav">
+                        <ul class="sortnav fl">
+                            <li>
+                                <a href="###">默认
+                                    <em></em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="saleNum">销量
+                                    <em></em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="goodcomment">好评
+                                    <em></em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="newlist">最新
+                                    <em class="newesticon"></em>
+                                </a>
+                            </li>
+                            <li class="sortprice">
+                                <a href="javascript:;">价格
+                                    <em class="priceicon"></em>
+                                    <em class="upicon"></em>
+
+                                </a>
+                            </li>
+                            <li class="setprice">
+                                <input type="text" class="priceArea minprice">
+                                <span>-</span>
+                                <input type="text" class="priceArea maxprice">
+                                <div class="mohu">
+                                    <span class="fl">清空</span>
+                                    <span class="fr pricecheck"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="samegoods fr">
+                            <a href="">合并同款</a>
                         </div>
                     </div>
-                    <div class="detail ">
-                        <div class="detailleft fl ">
-                            <ul class="imglist ">
-                                <!-- <li></li>
-                                <li></li> -->
-                            </ul>
-                        </div>
-                        <div class="detailcenter fl ">
-                            <ul class="minImg ">
-                                <li>
-                                    <!-- <img src="../img/goods/big1.jpg" alt=""> -->
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="detailright fl ">
-                            <div class="good ">
-                                <!-- 特惠价:￥
-                                <span>98.00</span> 充100反100，点击充值 -->
+                </div>
+                <div class="productwrapper">
+                    <ul class="productlist clearfix">
+                        <!-- 渲染 -->
+                        <li>
+                            <div class="picture">
+                                <a href="">
+                                    <img src="../img/clothesimg/t_shirt001.jpg" alt="">
+                                </a>
                             </div>
-                            <div class="color clearfix">
-                                <span class="fl">颜色：</span>
-                                <ul class="fl">
-                                    <!-- <li>
-                                        1
-                                    </li>
-                                    <li>
-                                        1
-                                    </li> -->
-                                </ul>
+                            <p>
+                                <a href="" title="凡客衬衫 吉国武 免烫 异色领100支 4.0 紫色条纹">凡客衬衫 吉国武 免烫 异色领100支 4.0 紫色条纹</a>
+                            </p>
 
+                            <div class="Mpricediv">
+                                <span class="Sprice">售价￥698</span>
                             </div>
-                            <div class="size clearfix">
-                                <span class="fl">尺码：</span>
-                                <ul>
-                                    <!-- <li>
-                                        1
-                                    </li>
-                                    <li>2</li> -->
-                                </ul>
-                            </div>
-                            <div class="number clearfix">
-                                <span class="fl">数量：</span>
-                                <div class="shopping">
-                                    <span class="subtract">-</span>
-                                    <input type="text" class="inputnum fl" value="1" max="9" min="1">
-                                    <span class="add">+</span>
+                            <div class="goodsmessage">
+                                <div class="messageicon"></div>
+                                <div class="messagebox">
+                                    <div class="imgs">
+                                        <img src="../img/clothesimg/t_shirt001.jpg" alt="">
+                                    </div>
+                                    <div class="goodstitle">
+                                        凡客衬衫 吉国武 免烫 异色领100支 4.0 紫色条纹
+                                    </div>
+                                    <p>产品编号:2344556</p>
+
+                                    <div class="saleprice">
+                                        <a href="" class="fl">售价:￥298</a>
+                                        <a href="" class="fl">
+                                            好评率
+                                            <br>
+                                            <span>100%</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="select "></div>
-                            <div class="opera">
-                                <input type="button " class="btn buy " value="立即购买">
-                                <input type="button " value="加入购物车 " class="btn addcart">
-                            </div>
-                        </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="searchPage fr">
+                    <div class="pageleft fl">
+                        <span class="pre fl"
+                            style="background: url(&quot;../img/indeximg/sprites.png&quot;) 3px -1996px no-repeat;">
+                            <a href="###" style="color: rgb(51, 51, 51);">上一页</a>
+                        </span>
+                        <ul class="pager fl">
+                            <li>1</li>
+                        </ul>
+                        <span class="next fl">
+                            <a href="###">下一页</a>
+                        </span>
                     </div>
-                    <div class="addcart1" style="display: block;">
-                        <div class="tip">
-                            <span class="fl">商品成功放入购物车 </span>
-                            <span class="fr close">X </span>
-                        </div>
-                        <div class="pushcert">
-                            <div class="CarBox_bg fl"></div>
-                            <div class="CarBox_NumPrice fl">
-                                <p>共有
-                                    <span>1</span>
-                                    件商品</p>
-                                <p>
-                                    总计<span>¥96</span>
-                                </p>
-                            </div>
-                            <div class="CarBox_Btn fl">
-                                <a href="../index.html" class="track fl">
-                                    &lt;&lt;购物继续
-                                </a>
-                                <a href="mycert.html" class="goto fl">
-                                    去购物车&gt;&gt;
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="comend">
-                                <h2>
-                                    推荐产品
-                                </h2>
-                                <ul class="ul1">
-                                    <li>
-                                        <img src="../img/goods/re1.jpg" alt="">
-                                        <p>
-                                            凡客衬衫领尖扣短袖男款白色
-                                        </p>
-                                        <span>
-                                            售价¥198
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <img src="../img/goods/re2.jpg" alt="">
-                                        <p>
-                                            POLO衫本布衬衫领男款浅花灰
-                                        </p>
-                                        <span>
-                                            售价¥198
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <img src="../img/goods/re3.jpg" alt="">
-                                        <p>
-                                            凡客卫衣圆领熊本熊S2浅花灰
-                                        </p>
-                                        <span>
-                                            售价¥198
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <img src="../img/goods/re4.jpg" alt="">
-                                        <p>
-                                            凡客衬衫牛津纺男款天蓝色
-                                        </p>
-                                        <span>
-                                            售价¥198
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <img src="../img/goods/re5.jpg" alt="">
-                                        <p>
-                                            凡客帆布鞋女款黑色
-                                        </p>
-                                        <span>
-                                            售价¥198
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="pageright fl">
+                        <span class="fl">
+                            共
+                            <em>1</em>页
+                        </span>
+                        <div class="fl">
+                            <span class="fl">
+                                到
+                                <input type="text" class="intsearch" value="1">页
+                            </span>
+                            <input type="button" class="fl confirmbtn">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="about">
+            <ul class="abouthelp">
+                <li>
+                    <a href=" ">
+                        <img src="../img/home/onlinecustomer.png" alt=" ">
+                    </a>
+                    <p class="onlinetime "> 7X9小时在线客服</p>
+                </li>
+                <li>
+                    <a href=" ">
+                        <img src="../img/home/seven.png" alt=" ">
+                    </a>
+                    <p> 7天内退货</p>
+                    <p> 购物满199元免运费</p>
 
-
+                </li>
+                <li>
+                    <a href="###">
+                        <img src="../img/home/fankecode.jpg" alt=" ">
+                    </a>
+                    <p> 扫描下载
+                        <em>凡客</em>客户端</p>
+                </li>
+            </ul>
+            <div class="other ">
+                <ul class="otherhelp ">
+                    <li>
+                        <a href="javascript:;">关于凡客</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">新手指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">配送范围及时间</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">支付方式</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">售后服务</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">帮助中心</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footertop">
+                    <p> Copyright 2007 - 2019 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号
+                        出版物经营许可证新出发京批字第直110138号
+                    </p>
+                    <p>凡客诚品（北京）科技有限公司</p>
+                </div>
+                <div class="footerbottom">
+                    <span>
+                        <a href="javascript:;"></a>
+                    </span>
+                    <span>
+                        <a href="###"></a>
+                    </span>
+                    <span>
+                        <a href="###"></a>
+                    </span>
+                    <span>
+                        <a href="###"></a>
+                    </span>
+                    <span>
+                        <a href="###"></a>
+                    </span>
+                    <span>
+                        <a href="###"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

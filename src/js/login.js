@@ -16,7 +16,7 @@ $(function () {
         $(this).siblings().removeClass("active");
         $(".loginchange").eq(index).addClass("selected");
         $(".loginchange").eq(index).siblings().removeClass("selected");
-        // 切换清空
+        // 切换清空表单
         $(".loginchange").eq(index).find("input").not("input:last").val("");
         $(".loginchange").eq(index).find(".tips").css({ "visibility": "hidden" })
 
@@ -63,11 +63,22 @@ $(function () {
             console.log("验证码错误");
         }
     }
+    // 点击切换验证码,改变res
+    document.getElementsByClassName("next")[0].onclick = function () {
+        res = verifyCode.validate(document.getElementsByClassName("identify")[0].value);
+        if (res) {
+            console.log("验证正确");
+        } else {
+            console.log("验证码错误");
+        }
+    }
 
 
     $(".phone").on("focus", function () {
-        // 
+        // 隐藏
         $(".loginchange .tipsB").html("请输入有效的手机号码").css({ "visibility": "hidden" });
+        // 隐藏
+        $(".loginchange .tipsT").css({ "visibility": "hidden" });
     })
 
     // 开关
@@ -148,6 +159,15 @@ $(function () {
         }
     })
 
+    // $(".next").on("click", function () {
+    //     if (res) {
+    //         $(".loginchange .tipsM").css({ "visibility": "hidden" });
+    //         // res = null;
+    //     } else {
+    //         $(".loginchange .tipsM").html("您输入的验证码错误，请重新输入。").css({ "visibility": "visible" });
+    //     }
+    // })
+
 
     // ------手机验证码验证------
     // $(".phoneidentify").on("blur", function () {
@@ -194,7 +214,6 @@ $(function () {
                 "url": "../api/login1.php",
                 "data": {
                     "phone": username,
-                    "psw": psw,
                 },
                 success: function (str) {
                     if (str) {
@@ -202,16 +221,17 @@ $(function () {
                     }
                     let obj = JSON.parse(str);
                     console.log(obj);
-                    
+
                     // 查询账号
                     if (obj.user == true) {
                         // 账号密码校验
                         if (obj.success == true) {
                             alert("登录成功");
-                            // 设置Cookie
-                            cookieFun.setCookie(obj.uid, username, 7);
                             // 跳转到主页
                             location.href = "../index1.html";
+                            // 设置Cookie
+                            cookieFun.setCookie("uid", obj.uid, 7);
+
                         } else {
                             $("form div .tips2").html("账户和密码不匹配").css({ "visibility": "visible" });
                         }
@@ -240,9 +260,30 @@ $(function () {
             if (phoneVal == 1234) {
                 // 电话号码
                 let phoneCofirm = $.trim($(".phone").val());
-                // 确认为接手验证码的手机号
+                // 确认为接收验证码的手机号
                 if (phoneCofirm == number) {
                     alert("登录成功！！！")
+
+                    $.ajax({
+                        "type": "post",
+                        "url": "../api/login1.php",
+                        "data": {
+                            "phone": phone,
+                        },
+                        success: function (str) {
+                            console.log(str)
+                            if (str) {
+                                $(".loginbtn").val("登录");
+                            }
+                            let obj = JSON.parse(str);
+                            console.log(obj);
+                            // 跳转主页
+                            location.href = "../index1.html"
+                            // 设置Cookie
+                            cookieFun.setCookie("uid", obj.uid, 7);
+                        }
+                    })
+
                     // 用户存在
                     $.ajax({
                         "type": "get",
@@ -262,8 +303,7 @@ $(function () {
                                     success: function (str) {
                                         if (str) {
                                             console.log(str);
-                                            // 跳转主页
-                                            location.href = "../index1.html"
+
                                         }
                                     },
                                 })
@@ -282,8 +322,6 @@ $(function () {
             }
         }
     }
-
-
 
 })
 

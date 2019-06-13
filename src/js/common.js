@@ -529,7 +529,7 @@ var cookieFun = {
         // 设置储存时间
         oDate.setDate(oDate.getDate() + day);
 
-        document.cookie = key + "=" + val + ";expires=" + oDate;
+        document.cookie = key + "=" + val + ";expires=" + oDate + ';path=/';
         return this;
     },
 

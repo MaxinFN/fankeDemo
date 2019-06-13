@@ -1,0 +1,653 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  font-family: "宋体";
+}
+
+.container {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#fanke {
+  width: 100%;
+  height: 100%;
+  font-size: 12px
+  /*-------------头部-------------*/
+  /*-------------about-------------*/
+  /*-------------底部-------------*/
+}
+#fanke .header {
+  height: 167px;
+  background-color: #fff;
+}
+#fanke .header .headerArea .headerTop {
+  height: 32px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ccc;
+  color: #808080;
+  line-height: 32px;
+}
+#fanke .header .headerArea .headerTop .headerTopRight {
+  width: 126px;
+  height: 32px;
+  position: relative;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .notice {
+  width: 55px;
+  padding-left: 26px;
+  height: 100%;
+  background: url("../img/home/notice.png") no-repeat scroll 0px center;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .notice a {
+  display: inline-block;
+  width: 55px;
+  color: #808080;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 {
+  float: right;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat {
+  color: #808080;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat img {
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat .wexin {
+  width: 148px;
+  height: 168px;
+  background: #fff;
+  display: none;
+  position: absolute;
+  right: 0;
+  border: 1px solid #ddd;
+  z-index: 100;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 #wechat .wexin img {
+  border: 0;
+  vertical-align: middle;
+}
+#fanke .header .headerArea .headerTop .headerTopRight .icon1 .weibo {
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft {
+  min-width: 240px;
+  height: 32px;
+  line-height: 32px;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft span a {
+  color: #808080;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft .user a {
+  padding-right: 7px;
+}
+#fanke .header .headerArea .headerTop .headerTopLeft .myorder {
+  padding-right: 14px;
+}
+#fanke .header .headerMiddle {
+  height: 62px;
+  margin-top: 20px;
+}
+#fanke .header .headerMiddle .vanclSearch {
+  width: 438px;
+  height: 60px;
+  padding-top: 8px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab {
+  height: 30px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .search #searchTxt {
+  width: 249px;
+  height: 27px;
+  padding: 0 5px;
+  line-height: 27px;
+  border: 1px solid #c9caca;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .search #searchBtn {
+  width: 49px;
+  height: 29px;
+  border: none;
+  cursor: pointer;
+  background: url("../img/home/vanclsprite.png") no-repeat -100px 0px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart {
+  width: 105px;
+  height: 27px;
+  line-height: 27px;
+  border: 1px solid #c1383e;
+  background: url("../img/home/vanclsprite.png") no-repeat scroll -154px 0px;
+  position: relative;
+  z-index: 10;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart a {
+  padding-left: 29px;
+  padding-top: 6px;
+  font-size: 12px;
+  color: #fff;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow {
+  position: absolute;
+  width: 328px;
+  height: 298px;
+  border: 1px solid #b81c22;
+  z-index: 100;
+  left: -224px;
+  background-color: #fff;
+  color: #727171;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox {
+  width: 286px;
+  height: 268px;
+  margin: 20px;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox p {
+  border-bottom: 1px solid #ececec;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox .certgoods {
+  height: 208px;
+  overflow: hidden;
+}
+#fanke .header .headerMiddle .vanclSearch .searchTab .shoppingCart .certshow .certbox .certgoods .certbottom {
+  height: 40px;
+  border-top: 1px solid #ececec;
+}
+#fanke .header .headerBottom {
+  height: 46px
+  /*一级导航*/
+}
+#fanke .header .headerBottom .logo {
+  width: 185px;
+  height: 46px;
+  background: url("../img/home/logo18546.png");
+  cursor: pointer;
+}
+#fanke .header .headerBottom .nav > ul {
+  /*公共样式*/
+}
+#fanke .header .headerBottom .nav > ul > li {
+  float: left;
+  width: 99px;
+  margin-top: 20px;
+  height: 100%;
+  text-align: center;
+  position: relative
+  /*二级导航*/
+}
+#fanke .header .headerBottom .nav > ul > li > a {
+  display: block;
+  font-size: 16px;
+  color: #727171;
+  position: relative;
+  padding-bottom: 5px;
+}
+#fanke .header .headerBottom .nav > ul > li > a:after {
+  content: "|";
+  height: 12px;
+  color: #888888;
+  float: right;
+}
+#fanke .header .headerBottom .nav > ul > li > a:hover {
+  color: #a10000;
+}
+#fanke .header .headerBottom .nav > ul > li .menu {
+  display: none;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 99px;
+  position: absolute;
+  z-index: 100;
+  overflow: hidden;
+}
+#fanke .header .headerBottom .nav > ul > li .menu li {
+  float: left;
+  width: 99px;
+  margin-top: 20px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+#fanke .header .headerBottom .nav > ul > li .menu li a {
+  display: block;
+  font-size: 16px;
+  color: #727171;
+  position: relative;
+  padding-bottom: 5px;
+}
+#fanke .header .headerBottom .nav > ul > li .menu li a:hover {
+  color: #a10000;
+}
+#fanke .header .headerBottom .nav > ul > li .down {
+  border-top: 5px solid #b81c22 !important;
+}
+#fanke .showlistmain {
+  height: 1720px;
+}
+#fanke .showlistmain .guide {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  margin-top: 40px;
+  color: #b4b4b4;
+}
+#fanke .showlistmain .guide a {
+  color: #333333;
+}
+#fanke .showlistmain .guide .findresult a {
+  color: #a00000;
+}
+#fanke .showlistmain .selectarea {
+  height: 35px;
+  border: 1px solid #c7cacd;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#fanke .showlistmain .selectarea .cloth {
+  width: 66px;
+  border-right: 1px solid #c7cacd;
+  border-bottom: 1px dashed #c7cacd;
+}
+#fanke .showlistmain .selectarea ul li {
+  float: left;
+  width: 80px;
+}
+#fanke .showlistmain .selectarea ul li span {
+  color: #c7cacd;
+}
+#fanke .showlistmain .allgoods {
+  height: 65px;
+  width: 1200px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+#fanke .showlistmain .allgoods .all {
+  border-bottom: 2px solid #b81c22;
+  height: 30px;
+}
+#fanke .showlistmain .allgoods .all a {
+  display: block;
+  width: 88px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background: #b81c22;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav {
+  height: 34px;
+  box-sizing: border-box;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav li {
+  height: 34px;
+  width: 74px;
+  float: left;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav li a {
+  display: inline-block;
+  height: 34px;
+  width: 74px;
+  color: #656565;
+  line-height: 34px;
+  border: 1px solid #ccc;
+  border-right: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav li a em {
+  display: inline-block;
+  height: 11px;
+  width: 11px;
+  line-height: 11px;
+  background: url(../img/mycart/sprites.png) no-repeat 0px -3090px;
+  vertical-align: middle;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav li a .newesticon {
+  background: url(../img/mycart/sprites.png) no-repeat -21px -3112px;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav li a .priceicon {
+  background: url(../img/mycart/sprites.png) no-repeat 0px -3112px;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav li a .upicon {
+  background: url(../img/indeximg/sprites.png) no-repeat 0px -3130px;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .sortprice {
+  background: #eee;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .setprice {
+  width: 112px;
+  position: relative;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .setprice input {
+  position: relative;
+  z-index: 100;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .setprice .priceArea {
+  border: 1px solid #aeb1b4;
+  height: 17px;
+  line-height: 17px;
+  width: 35px;
+  float: left;
+  margin: 8px 0px 0px 6px;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .setprice span {
+  margin: 6px 2px;
+  float: left;
+  line-height: 19px;
+  color: #999;
+  font-size: 19px;
+  position: relative;
+  z-index: 100;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .setprice .mohu {
+  height: 63px;
+  position: absolute;
+  width: 100px;
+  border: 1px solid #aeb1b4;
+  background: #fff;
+  display: none;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .setprice .mohu span {
+  width: 45px;
+  height: 19px;
+  margin-top: 38px;
+  font-size: 12px;
+  color: #333;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+#fanke .showlistmain .allgoods .goodsnav .sortnav .setprice .mohu span:nth-child(2) {
+  background: url(../img/mycart/tabbgn6_ws.png) no-repeat 0px -58px;
+}
+#fanke .showlistmain .allgoods .goodsnav .samegoods a {
+  display: block;
+  height: 34px;
+  border-left: 1px solid #ccc;
+  line-height: 34px;
+  background: #eee;
+  color: #999;
+  width: 88px;
+  text-align: center;
+}
+#fanke .showlistmain .productwrapper .productlist li {
+  float: left;
+  margin: 0px 9px 20px 0px;
+  width: 231px;
+  position: relative;
+}
+#fanke .showlistmain .productwrapper .productlist li .picture {
+  border: 1px solid #dbd7d6;
+}
+#fanke .showlistmain .productwrapper .productlist li .picture img {
+  width: 228px;
+  height: 228px;
+}
+#fanke .showlistmain .productwrapper .productlist li p {
+  height: 43px;
+  line-height: 43px;
+  width: 212px;
+  overflow: hidden;
+}
+#fanke .showlistmain .productwrapper .productlist li p a {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-family: "Microsoft YaHei";
+  padding: 0px 5px 5px;
+  display: block;
+  height: 30px;
+  width: 212px;
+  color: #727171;
+  overflow: hidden;
+}
+#fanke .showlistmain .productwrapper .productlist li .Mpricediv {
+  color: #b81c22;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage {
+  display: none;
+  background: #e6eaf3;
+  width: 290px;
+  height: 426px;
+  border: 1px solid #000;
+  position: absolute;
+  top: -30px;
+  left: 242px;
+  text-align: center;
+  z-index: 11;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messageicon {
+  width: 11px;
+  height: 20px;
+  position: absolute;
+  top: 30px;
+  background: url(../img/indeximg/sprites.png) no-repeat 0 -931px;
+  left: -11px;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox {
+  margin: 10px auto;
+  width: 272px;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox .imgs {
+  width: 270px;
+  height: 268px;
+  border: 1px solid #fff;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox .imgs img {
+  width: 270px;
+  height: 268px;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox .goodstitle {
+  font-size: 14px;
+  color: #333333;
+  font-weight: bold;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  height: 22px;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox p {
+  text-align: left;
+  font-size: 8px;
+  color: #999;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox .saleprice a {
+  color: #c21c22;
+  font-weight: bold;
+  text-align: left;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox .saleprice a:nth-child(1) {
+  width: 136px;
+  height: 24px;
+  border-right: 1px dashed #ccc;
+  text-align: left;
+  line-height: 24px;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox .saleprice a :last-child {
+  margin-left: 30px;
+}
+#fanke .showlistmain .productwrapper .productlist li .goodsmessage .messagebox .saleprice a span {
+  font-size: 22px;
+}
+#fanke .showlistmain .searchPage {
+  height: 25px;
+  line-height: 25px;
+}
+#fanke .showlistmain .searchPage .pageleft span {
+  width: 57px;
+  height: 23px;
+  display: block;
+  padding-left: 14px;
+  line-height: 24px;
+  text-align: left;
+  border: 1px solid #efefef;
+}
+#fanke .showlistmain .searchPage .pageleft span a {
+  width: 57px;
+  height: 23px;
+  display: block;
+}
+#fanke .showlistmain .searchPage .pageleft ul {
+  margin-right: 7px;
+}
+#fanke .showlistmain .searchPage .pageleft ul li {
+  margin-left: 7px;
+  float: left;
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 26px;
+  background: #ccc;
+  line-height: 24px;
+  height: 24px;
+  border: 1px solid #ededed;
+  text-align: center;
+  cursor: pointer;
+}
+#fanke .showlistmain .searchPage .pageright span {
+  display: block;
+  margin-left: 10px;
+}
+#fanke .showlistmain .searchPage .pageright span .intsearch {
+  width: 26px;
+  height: 24px;
+  border: 1px solid #ededed;
+  line-height: 24px;
+  text-align: center;
+  margin: 0px 4px;
+}
+#fanke .showlistmain .searchPage .pageright div .confirmbtn {
+  width: 49px;
+  height: 25px;
+  border: 0;
+  margin-left: 10px;
+  background: url(../img/mycart/sprites.png) no-repeat 0px -2044px;
+  cursor: pointer;
+}
+#fanke .about {
+  width: 1118px;
+  height: 282px;
+  margin: 80px auto;
+  padding: 0px 40px 0px;
+  border: 1px solid #e0e0e1;
+  font-family: "Microsoft YaHei";
+  margin-bottom: 25px;
+  box-sizing: content-box;
+}
+#fanke .about .abouthelp {
+  margin: 33px 0px 23px;
+  height: 138px;
+}
+#fanke .about .abouthelp li {
+  float: left;
+  width: 370px;
+  height: 138px;
+  border-right: 1px solid #e0e0e1;
+  margin-right: 0px;
+  text-align: center;
+}
+#fanke .about .abouthelp li p {
+  height: 26px;
+  line-height: 26px;
+}
+#fanke .about .abouthelp li a .onlinetime {
+  margin: 0 auto;
+  width: 156px;
+  font-size: 14px;
+  background: #b81c22;
+  color: #ffffff;
+}
+#fanke .about .abouthelp li img {
+  margin-bottom: 20px;
+}
+#fanke .about .abouthelp li:last-child {
+  border-right: 0px;
+}
+#fanke .about .abouthelp li:last-child img {
+  width: 104px;
+  height: 104px;
+}
+#fanke .about .other .otherhelp {
+  height: 54px;
+  background: #f8f8f8;
+  width: 100%;
+}
+#fanke .about .other .otherhelp li {
+  float: left;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 15px;
+  border-right: 1px solid #dadadb;
+}
+#fanke .about .other .otherhelp li:last-child {
+  border-right: none;
+}
+#fanke .about .other .otherhelp li a {
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 65px;
+  color: #323232;
+}
+#fanke .footer {
+  height: 136px;
+  font-size: 10px;
+  color: #3e3a39;
+}
+#fanke .footer .footertop {
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+  border-top: 1px solid #3e3a39;
+  margin-bottom: 20px;
+}
+#fanke .footer .footertop p:nth-child(1) {
+  margin-top: 10px;
+}
+#fanke .footer .footerbottom {
+  width: 760px;
+  margin: auto;
+  height: 48px;
+}
+#fanke .footer .footerbottom span {
+  margin: 0 10px;
+}
+#fanke .footer .footerbottom span a {
+  display: inline-block;
+  height: 45px;
+}
+#fanke .footer .footerbottom span:nth-child(1) a {
+  width: 113px;
+  background: url("../img/home/spritesbgtop.png") no-repeat 0 -581px;
+}
+#fanke .footer .footerbottom span:nth-child(2) a {
+  width: 156px;
+  background: url("../img/home/spritesbgtop.png") no-repeat 0 -629px;
+}
+#fanke .footer .footerbottom span:nth-child(3) a {
+  width: 96px;
+  background: url("../img/home/spritesbgtop.png") no-repeat 0 -675px;
+}
+#fanke .footer .footerbottom span:nth-child(4) a {
+  width: 101px;
+  background: url("../img/home/spritesbgtop.png") no-repeat -97px -675px;
+}
+#fanke .footer .footerbottom span:nth-child(5) a {
+  width: 42px;
+  background: url("../img/home/spritesbgtop.png") no-repeat -202px -675px;
+}
+#fanke .footer .footerbottom span:nth-child(6) a {
+  width: 120px;
+  background: url("../img/home/cctv.png") no-repeat left center;
+  background-size: contain;
+}

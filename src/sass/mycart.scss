@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+* {
+    box-sizing: content-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font: 12px Arial, Helvetica, sans-serif, 宋体;
+}
+
+.container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#mycert {
+
+    /*------------头部-----------*/
+    .head {
+        .header {
+            height: 54px;
+            border-bottom: 1px solid #7a7f89;
+            line-height: 40px;
+            padding-top: 15px;
+
+
+
+            a {
+                color: #333;
+            }
+
+            div {
+                margin-right: 40px;
+                color: #666;
+
+                span {
+                    display: inline-block;
+
+                    a {
+                        color: #a10000;
+                        padding: 0 5px;
+                    }
+                }
+            }
+
+            .logo {
+                width: 122px;
+                height: 29px;
+                margin-left: 95px;
+                background: url("../img/mycart/vancl-logo.png") no-repeat -93px center;
+                // background-size: contain;
+            }
+
+        }
+    }
+
+    /*------------location-----------*/
+    .location {
+        .progress {
+            width: 540px;
+            height: 28px;
+            margin-top: 10px;
+            background: url("../img/mycart/newProm.gif") 0 0;
+
+            em {
+                display: inline-block;
+                width: 170px;
+                color: #fff;
+                font-weight: bold;
+                line-height: 28px;
+                text-align: center;
+            }
+
+            span {
+                color: #666;
+                display: inline-block;
+                font-weight: bold;
+                line-height: 28px;
+                text-align: center;
+                width: 170px;
+            }
+        }
+    }
+
+    /*------------shopcart-----------*/
+    .shopcart {
+        margin-top: 12px;
+
+        .carttop {
+            height: 30px;
+            overflow: hidden;
+            padding-left: 45px;
+            background: url("../img/mycart/newpromotion.gif") no-repeat -460px 0;
+        }
+
+        h2 {
+            line-height: 38px;
+            margin-right: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 6px;
+            color: #656565;
+            line-height: 20px;
+
+            span {
+                color: #a10000;
+            }
+        }
+
+    }
+
+    .table {
+        width: 100%;
+        margin-top: 10px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+
+            thead {
+                tr {
+                    .bdleft {
+                        border-left: 1px solid #DCDFE4;
+                    }
+
+                    .titlewhite {
+                        border-top: 1px solid #DCDFE4;
+                        border-bottom: 1px solid #B7B7B7;
+                        text-align: center;
+                        vertical-align: middle;
+                        background: url(../img/mycart/carthd.png) repeat-x;
+                    }
+
+                    .select {
+                        text-align: left;
+                    }
+
+                    th {
+                        height: 35px;
+                        border-top: 1px solid #DCDFE4;
+                        border-bottom: 1px solid #B7B7B7;
+                        vertical-align: middle;
+                        text-align: center;
+                        background: url(../img/mycart/carthd.png) repeat-x;
+
+                    }
+
+                    .imgbox {
+                        width: 50px;
+                        height: 35px;
+                    }
+
+                    .bdright {
+                        border-right: 1px solid #DCDFE4;
+                    }
+
+                    .titlewhite {
+                        width: 16px;
+                        height: 35px;
+                    }
+                }
+            }
+
+            tbody {
+                border: 1px solid #dcdfe4;
+
+                tr {
+                    width: 950px;
+                    padding: 0 12px;
+
+                    td {
+                        height: 70px;
+                        text-align: center;
+
+                        span {
+                            display: inline-block;
+                            border: 0 none;
+                            height: 20px;
+                            line-height: 20px;
+                            vertical-align: middle;
+                            width: 17px;
+                        }
+
+                        .subtract {
+                            background: url(../img/indeximg/cartsprite.png) no-repeat -51px 0;
+                            margin-left: 15px;
+                        }
+
+                        .inputnum {
+                            margin: 0 5px;
+                            width: 30px;
+                            height: 18px;
+                            border: 1px solid #D8D8D8;
+                            text-align: center;
+                        }
+
+                        .add {
+                            background: url(../img/mycart/cartsprite.png) no-repeat 0px 0;
+                        }
+                    }
+
+                    .selected {
+                        text-align: center;
+                    }
+
+                    .descript {
+                        text-align: left;
+                        width: 310px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .toatl {
+        height: 124px;
+
+        .container {
+            box-sizing: border-box;
+            padding: 12px 10px 0px 0;
+            margin-top: 10px;
+            background: none repeat #FFFEF5;
+            border: 1px solid #EBE5BB;
+            line-height: 25px;
+
+            .summary {
+                padding: 14px 42px 0 13px;
+                height: 39px;
+
+                .allselect {
+                    margin-right: 10px;
+                }
+
+                .alldel {
+                    margin: 0 20px 0 10px;
+                }
+
+                span {
+                    em {
+                        color: #a10000;
+                    }
+                }
+
+                .free {
+                    color: #a10000;
+                }
+            }
+
+            .sum {
+                padding: 10px 10px 10px 13px;
+
+                .amount {
+                    font-size: 24px;
+                    color: #a10000;
+                }
+            }
+
+            .btnpanel {
+                box-sizing: content-box;
+
+                .gobuy {
+                    display: inline-block;
+                    color: #666;
+                    height: 37px;
+                    line-height: 37px;
+                    margin-left: 10px;
+                    font-size: 14px;
+                    text-align: center;
+                    width: 122px;
+                    background: url(../img/mycart/newpromotion.gif) no-repeat -160px 0;
+                }
+
+                .checkouttrack {
+                    display: inline-block;
+                    color: #fff;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-left: 10px;
+                    padding-left: 50px;
+                    width: 110px;
+                    font-size: 20px;
+                    background: url(../img/mycart/newpromotion.gif) no-repeat 0px 0;
+                }
+            }
+        }
+    }
+
+    .cartempty {
+        display: none;
+
+        .container {
+            color: Gray;
+            font-size: 14px;
+            font-weight: bold;
+            height: 50px;
+            margin-top: 50px;
+            text-align: center;
+
+            a {
+                color: #a10000;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .foot {
+        color: #999;
+        text-align: center;
+
+        p {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .footbottom {
+            span {
+                margin-right: 20px;
+            }
+        }
+    }
+}
