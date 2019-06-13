@@ -343,15 +343,21 @@
                             margin-bottom: 11px;
                             border: 1px solid rgb(180, 180, 180);
 
-                            &:nth-child(1) {
-                                border: 1px solid rgb(161, 0, 0);
-                            }
+
+
+                            // &:nth-child(1) {
+                            //     border: 1px solid rgb(161, 0, 0);
+                            // }
 
                             img {
                                 width: 100%;
                                 height: 100%;
 
                             }
+                        }
+
+                        .activeImg {
+                            border: 1px solid rgb(161, 0, 0) !important;
                         }
                     }
                 }
@@ -370,6 +376,16 @@
                             position: absolute;
                             top: 0;
                             z-index: 1;
+                            display: none;
+
+                            &:nth-child(1) {
+                                display: block;
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
                     }
 
@@ -427,9 +443,16 @@
 
                                 border: 1px solid #B4B4B4;
 
-                                &:nth-child(1) {
-                                    border: 1px solid rgb(161, 0, 0);
-                                }
+                                // &:nth-child(1) {
+                                //     border: 1px solid rgb(161, 0, 0);
+                                // }
+                            }
+
+                            .activeColor {
+                                border: 1px solid rgb(161, 0, 0);
+                            }
+                            .activeColor1 {
+                                border: 1px solid rgb(161, 0, 0);
                             }
                         }
                     }
@@ -449,9 +472,17 @@
                                 text-align: center;
                                 border: 1px solid #C8C8C8;
 
-                                &:nth-child(1) {
-                                    border: 1px solid rgb(161, 0, 0);
-                                }
+                                // &:nth-child(1) {
+                                //     border: 1px solid rgb(161, 0, 0);
+                                // }
+                            }
+
+                            .activeSize {
+                                border: 1px solid rgb(161, 0, 0);
+                            }
+
+                            .activeSize1 {
+                                border: 1px solid rgb(161, 0, 0);
                             }
                         }
                     }

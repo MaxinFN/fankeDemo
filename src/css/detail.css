@@ -266,12 +266,12 @@
   margin-bottom: 11px;
   border: 1px solid #b4b4b4;
 }
-#fanke .main .render .detail .detailleft .imglist li:nth-child(1) {
-  border: 1px solid #a10000;
-}
 #fanke .main .render .detail .detailleft .imglist li img {
   width: 100%;
   height: 100%;
+}
+#fanke .main .render .detail .detailleft .imglist .activeImg {
+  border: 1px solid #a10000 !important;
 }
 #fanke .main .render .detail .detailcenter {
   width: 400px;
@@ -287,6 +287,14 @@
   position: absolute;
   top: 0;
   z-index: 1;
+  display: none;
+}
+#fanke .main .render .detail .detailcenter .minImg li:nth-child(1) {
+  display: block;
+}
+#fanke .main .render .detail .detailcenter .minImg li img {
+  width: 100%;
+  height: 100%;
 }
 #fanke .main .render .detail .detailcenter .maglify {
   width: 440px;
@@ -331,7 +339,10 @@
   cursor: pointer;
   border: 1px solid #B4B4B4;
 }
-#fanke .main .render .detail .detailright .color ul li:nth-child(1) {
+#fanke .main .render .detail .detailright .color ul .activeColor {
+  border: 1px solid #a10000;
+}
+#fanke .main .render .detail .detailright .color ul .activeColor1 {
   border: 1px solid #a10000;
 }
 #fanke .main .render .detail .detailright .size ul li {
@@ -347,7 +358,10 @@
   text-align: center;
   border: 1px solid #C8C8C8;
 }
-#fanke .main .render .detail .detailright .size ul li:nth-child(1) {
+#fanke .main .render .detail .detailright .size ul .activeSize {
+  border: 1px solid #a10000;
+}
+#fanke .main .render .detail .detailright .size ul .activeSize1 {
   border: 1px solid #a10000;
 }
 #fanke .main .render .detail .detailright .number .shopping input {
