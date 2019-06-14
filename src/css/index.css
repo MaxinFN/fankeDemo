@@ -288,6 +288,9 @@ body {
   margin-left: 10px;
   cursor: pointer;
 }
+#fanke .main .banner .carousel .paging .active {
+  background: #a10000;
+}
 #fanke .main .banner .carousel .change .arrow {
   display: block;
   width: 18px;

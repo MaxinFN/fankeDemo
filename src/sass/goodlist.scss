@@ -608,6 +608,15 @@ body {
             line-height: 25px;
 
             .pageleft {
+
+                .pager {
+                    li {}
+
+                    .active {
+                        background: #b81c22 !important;
+                    }
+                }
+
                 span {
                     width: 57px;
                     height: 23px;
@@ -621,6 +630,7 @@ body {
                         width: 57px;
                         height: 23px;
                         display: block;
+                        color: #000;
                     }
                 }
 
@@ -640,6 +650,8 @@ body {
                         text-align: center;
                         cursor: pointer;
                     }
+
+
                 }
 
 

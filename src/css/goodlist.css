@@ -484,6 +484,9 @@ body {
   height: 25px;
   line-height: 25px;
 }
+#fanke .showlistmain .searchPage .pageleft .pager .active {
+  background: #b81c22 !important;
+}
 #fanke .showlistmain .searchPage .pageleft span {
   width: 57px;
   height: 23px;
@@ -497,6 +500,7 @@ body {
   width: 57px;
   height: 23px;
   display: block;
+  color: #000;
 }
 #fanke .showlistmain .searchPage .pageleft ul {
   margin-right: 7px;

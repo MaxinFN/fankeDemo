@@ -57,13 +57,16 @@ $(function () {
                 // 刷新页面
                 location.href = "detail.html?gid=" + arr[1];
             })
-
-
-
         }
 
     }
     login();
+
+    // ************跳转列表页***************
+    $(".menu").on("click", "li", function () {
+        console.log(123)
+        window.open().location = "goodslist.html";
+    })
 
     // *********截取网址，获取id渲染*********
     function render() {
@@ -103,7 +106,7 @@ $(function () {
         $(".censhan").prepend(div1);
     }
 
-    // 大图
+    // 主图
     function bigImgRender(obj) {
         let img = obj[0].image;
         let imgArr = img.split("&");
@@ -117,25 +120,36 @@ $(function () {
 
     // 图片框个数
     function imgMinRender(obj) {
-        console.log(obj)
+        // console.log(obj)
         let str = obj[0].image;
 
         let imgArr = str.split("&");
         let len = imgArr.length;
         let li = "";
-
+        let li1 = "";
         for (let i = 0; i < len; i++) {
             li += `<li><img src="../img/goods/${imgArr[i]}" alt=""></li>`;
         }
+
+        for (let i = len - 1; i >= 0; i--) {
+            li1 += `<li><img src="../img/goods/${imgArr[i]}" alt=""></li>`;
+        }
+
         // 插入数据
         $(".detailleft .imglist").html(li);
         $(".detailleft .imglist li").eq(0).addClass("activeImg");
+        // 放大框
+        $(".detailcenter .maglify").html(li1);
+
         // 切换图片
         $(".imglist li").hover(function () {
             let index = $(this).index();
-            // 大图
+            // 主图
             $(".minImg li").eq(index).siblings().css({ "display": "none" });
             $(".minImg li").eq(index).css({ "display": "block" });
+            // 放大图
+            $(".maglify li").eq(index).siblings().css({ "display": "none" });
+            $(".maglify li").eq(index).css({ "display": "block" });
             // 小图
             $(this).siblings().removeClass("activeImg");
             $(this).addClass("activeImg");
@@ -238,6 +252,64 @@ $(function () {
         console.log(val)
         $(".inputnum").val(val);
     })
+
+
+    // ***********放大镜*************
+    function zoom() {
+        //放大镜
+        $('.imglist li').eq(0).css('border', '1px solid #a10000');
+        $('.minImg li').eq(0).css('zIndex', 2);
+        $('.maglify li').eq(0).css('zIndex', 2);
+
+        $(".minImg").hover(function () {
+            // $(".mask").show(); 
+            $(".maglify").show();
+        }, function () {
+            $(".mask").hide();
+            $(".maglify").hide();
+        })
+
+
+        //鼠标在盒子内滑动
+        $(".minImg").mousemove(function (e) {
+            console.log(123)
+            $(".mask").css('zIndex', 10);
+            // $(".mask").show().css('zIndex', 10);
+            // $(".maglify").show();
+            //在盒子中获取鼠标位置
+            $(this).css({ 'cursor': 'crosshair' });
+            let l = e.pageX - $(".detailcenter").offset().left - ($(".mask").width() / 2);
+            let t = e.pageY - $(".detailcenter").offset().top - ($(".mask").height() / 2);
+            if (l < 0) { //左边超出
+                l = 0;
+            }
+            if (l > $(".detailcenter").width() - $(".mask").width()) {//右边超出
+                l = $(".detailcenter").width() - $(".mask").width();
+            }
+            if (t < 0) { //顶端超出
+                t = 0;
+            }
+            if (t > $(".detailcenter").height() - $(".mask").height()) {//底部超出
+                t = $(".detailcenter").height() - $(".mask").height();
+            }
+            //设置放大区域的移动
+            $(".mask").css({
+                left: l + "px",
+                top: t + "px"
+            });
+            //设置大图片的移动   大图片的移动方向与放大区域正好相反
+            let leftRate = l / $(".minImg").width();
+            let topRate = t / $(".minImg").height();
+            $(".maglify li").css({
+                'left': -leftRate * $('.maglify img').width() + "px",
+                'top': -topRate * $('.maglify img').height() + "px"
+            });
+        });
+    }
+    zoom();
+
+
+
 
     //  ******数加入购物车*******
 

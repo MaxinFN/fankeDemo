@@ -279,6 +279,16 @@
   border: 1px solid #e5e6e6;
   position: relative;
 }
+#fanke .main .render .detail .detailcenter .mask {
+  opacity: 0.6;
+  background-color: #e6eaf3;
+  border: 1px solid White;
+  position: absolute;
+  width: 220px;
+  height: 200px;
+  top: 0;
+  z-index: 10;
+}
 #fanke .main .render .detail .detailcenter .minImg {
   width: 400px;
   height: 400px;
@@ -297,16 +307,20 @@
   height: 100%;
 }
 #fanke .main .render .detail .detailcenter .maglify {
+  position: absolute;
   width: 440px;
   height: 400px;
   border: 1px solid #000;
-  top: -430px;
-  left: 404px;
+  top: 0px;
+  left: 410px;
   background: #fff;
+  display: none;
   overflow: hidden;
+  display: none;
 }
 #fanke .main .render .detail .detailcenter .maglify li {
   position: absolute;
+  z-index: 99;
 }
 #fanke .main .render .detail .detailcenter .maglify img {
   width: 800px;
