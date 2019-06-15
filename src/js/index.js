@@ -8,7 +8,7 @@ $(function () {
     // 查看登录状态
     function login() {
         let cookVal = cookieFun.getCookie("uid");
-        console.log(cookVal);
+        // console.log(cookVal);
         if (cookVal) {
             $.ajax({
                 "type": "post",
@@ -64,18 +64,18 @@ $(function () {
     //轮播图
     $(function () {
         //1. 获取元素
-        var zz_carousel = $('#zz_carousel');
-        var imgs = zz_carousel.find('.image_reel li');
-        var paging = zz_carousel.find('.paging');
-        var previous = zz_carousel.find('.previous a');
-        var next = zz_carousel.find('.next');
+        let zz_carousel = $('#zz_carousel');
+        let imgs = zz_carousel.find('.image_reel li');
+        let paging = zz_carousel.find('.paging');
+        let previous = zz_carousel.find('.previous a');
+        let next = zz_carousel.find('.next');
         imgs.eq(0).css('zIndex', 1);
         //2. 添加小圆点
-        var picIdx = 0;  //当前图片下标
-        var zIndexNum = 2; //层级
+        let picIdx = 0;  //当前图片下标
+        let zIndexNum = 2; //层级
         //页码
         imgs.each(function (index) {
-            var span = $('<span></span>');
+            let span = $('<span></span>');
             span.idx = index;
             span.appendTo(paging);
             span.click(function () {
@@ -103,7 +103,7 @@ $(function () {
             paging.children().eq(picIdx).addClass('active').siblings().removeClass('active');
         }
         //1. 自动播放和鼠标移入移出事件
-        var timer1 = null;
+        let timer1 = null;
         timer1 = setInterval(nextPic, 3000);
         zz_carousel.mouseenter(function () {
             clearInterval(timer1);
@@ -125,9 +125,26 @@ $(function () {
         next.click(function () {
             nextPic();
         });
-        function creatcert(arr) {
-            var res = arr.map(function (item) {
-                return ` <li class="clearfix">
+
+
+
+
+    });
+    // ***************购物车***************
+    let certnum = 0;
+    $('.shoppingCart').hover(function () {
+        $('.certshow').show().siblings().css('color', '#a10000').parent().css(
+            'background', '#fff');
+
+    }, function () {
+        $('.certshow').hide().siblings().css('color', '#fff').parent().css(
+            'background', 'url(img/goods/vanclsprite.png) no-repeat -154px 0px')
+    });
+
+    // 渲染购物车
+    function creatcert(arr) {
+        let res = arr.map(function (item) {
+            return ` <li class="clearfix">
                         <div class="fl">
                         <img src="img/goods/${item.imgurl}" alt="">
                          </div>
@@ -142,31 +159,9 @@ $(function () {
                         </div>
                         <a href="" class="colors del fl">删除</a>
                     </li>`
-            }).join('');
-            $('.certgoods').html(res);
-        }
-        var certnum = 0;
-        $('.shoppingCart').hover(function () {
-            $('.certshow').show().siblings().css('color', '#a10000').parent().css(
-                'background', '#fff');
-            $.ajax({
-                type: 'get',
-                url: 'api/mycert.php',
-                success: function (str) {
-                    var arr = JSON.parse(str);
-                    var newarr = arr.data;
-                    certnum = arr.total
-                    creatcert(newarr);
-                    $('.tiaoshu').html(certnum);
-                }
-            });
-        }, function () {
-            $('.certshow').hide().siblings().css('color', '#fff').parent().css(
-                'background', 'url(img/goods/vanclsprite.png) no-repeat -154px 0px')
-        });
-
-    });
-
+        }).join('');
+        $('.certgoods').html(res);
+    }
 
 
     // ***********限量抢购渲染***********
@@ -255,7 +250,7 @@ $(function () {
                     </li>`;
         }).join("");
         $(".listshirt").html(str);
-        console.log(str);
+        // console.log(str);
         // 跳转详情页
         gotoDetail(".listshirt");
     }
@@ -441,7 +436,7 @@ $(function () {
         // 时间差
 
         let diff = parseInt((end - currentTime) / 1000);
-        console.log(diff);
+        // console.log(diff);
 
         if (diff >= 0) {
             // 开启定时器

@@ -69,6 +69,7 @@ $(function () {
     })
 
     // *********截取网址，获取id渲染*********
+
     function render() {
         // 截取网址
         let str = location.search.slice(1);
@@ -118,12 +119,15 @@ $(function () {
         $(".detailcenter .minImg").html(li);
     }
 
+
+
     // 图片框个数
     function imgMinRender(obj) {
         // console.log(obj)
         let str = obj[0].image;
 
         let imgArr = str.split("&");
+
         let len = imgArr.length;
         let li = "";
         let li1 = "";
@@ -139,7 +143,7 @@ $(function () {
         $(".detailleft .imglist").html(li);
         $(".detailleft .imglist li").eq(0).addClass("activeImg");
         // 放大框
-        $(".detailcenter .maglify").html(li1);
+        $(".detailcenter .maglify").html(li);
 
         // 切换图片
         $(".imglist li").hover(function () {
@@ -309,8 +313,143 @@ $(function () {
     zoom();
 
 
-
-
     //  ******数加入购物车*******
+    function shoppingCar() {
+        $(".addcart").on("click", function () {
+            let cook = cookieFun.getCookie("uid");
+
+            // 判断是否处于登录状态
+            if (cook) {
+                // 有选中尺码则返回下表，无则返回-1
+                let sizeFlag = $(".size ul")
+                    .children()
+                    .filter(".activeSize1").index();
+
+                // 判断是否选择尺码
+                if (sizeFlag != -1) {
+                    $(".addcart1").css({ "display": "block" });
+
+                    alert("i love you");
+                    // ****商品尺码****
+                    let size = $(".size ul li").eq(sizeFlag).text();
+                    // ****商品gid****
+                    let gid = getGid();
+                    // ****商品描述****
+                    let descript = $(".censhan").text();
+                    // ****商品价格****
+                    let price = parseInt($(".good span").text());
+                    // ****商品数量****           
+                    let num = $(".inputnum").val();
+                    // ****用户id*****
+                    let uid = getUid();
+                    // 图片
+                    let urlALL = imgUrl();
+                    // console.log(uid);
+                    // console.log(url);
+                    // url 图片
+                    let url = urlALL.split("/")[3];
+                    // console.log(urlArr);
+
+                    console.log(gid, url, descript, size, price, num, uid)
+
+                    $.ajax({
+                        "type": "post",
+                        "url": "../api/shoppingcar.php",
+                        data: {
+                            "gid": gid,
+                            "image": url,
+                            "descript": descript,
+                            "size": size,
+                            "price": price,
+                            "num": num,
+                            "uid": uid,
+                        },
+                        success: function () {
+                            // 更新购物车
+                            console.log(uid)
+                            updata(uid);
+                        }
+                    })
+
+
+
+
+                    // console.log(size);
+                } else if (sizeFlag == -1) {
+                    alert("亲亲，请选择商品尺码！")
+                }
+
+            } else {
+                alert("亲亲,请先登录哦~~~;")
+            }
+
+        })
+
+    }
+    shoppingCar();
+
+    // 获取gid
+    function getGid() {
+        let url = location.search;
+        // console.log(url);
+        let urlArr = url.split("=");
+        let gid = urlArr[1];
+        return gid;
+    }
+
+    // 获取uid
+    function getUid() {
+        let uid = document.cookie.split("=")[1];
+        return uid;
+    }
+
+    //获取图片路径
+    function imgUrl() {
+        console.log($(".minImg"))
+        let url = $(".minImg li:eq(0) img").attr("src");
+        console.log(381 + url);
+        return url;
+    }
+
+
+    // X关闭购物车信息
+    $(".addcart1 .close").on("click", function () {
+        $(".addcart1").css({ "display": "none" });
+    })
+
+    // 继续购物，关闭购物车信息
+    $(".CarBox_Btn .track").on("click", function () {
+        $(".addcart1").css({ "display": "none" });
+    })
+
+
+    // 更新购物总数量和总价
+    function updata(uid) {
+        $.ajax({
+            "type": "get",
+            "url": "../api/carttips.php",
+            data: {
+                "uid": uid,
+            },
+            success: function (str) {
+                console.log(str);
+                let obj = JSON.parse(str);
+                console.log(obj);
+                // 插入商品数量
+                $(".CarBox_NumPrice p:eq(0) span").text(obj.totals);
+                //总价
+                let arr = obj.data;
+                console.log(arr);
+
+                let allPrice = 0;
+                arr.forEach(function (item) {
+                    allPrice += item.nowprice * item.num;
+                })
+                console.log(allPrice);
+                //插入总价
+                $(".CarBox_NumPrice p:eq(1) span").text("￥" + allPrice);
+            }
+        })
+    }
 
 })

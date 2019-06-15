@@ -431,6 +431,7 @@
   background: #fff;
   z-index: 100;
   cursor: pointer;
+  display: none;
 }
 #fanke .main .render .addcart1 .tip {
   height: 42px;

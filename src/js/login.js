@@ -264,25 +264,32 @@ $(function () {
                 if (phoneCofirm == number) {
                     alert("登录成功！！！")
 
-                    $.ajax({
-                        "type": "post",
-                        "url": "../api/login1.php",
-                        "data": {
-                            "phone": phone,
-                        },
-                        success: function (str) {
-                            console.log(str)
-                            if (str) {
-                                $(".loginbtn").val("登录");
+
+                    function getUid() {
+
+                        $.ajax({
+                            "type": "post",
+                            "url": "../api/login1.php",
+                            "data": {
+                                "phone": phone,
+                            },
+                            success: function (str) {
+                                console.log(str)
+                                if (str) {
+                                    $(".loginbtn").val("登录");
+                                }
+                                let obj = JSON.parse(str);
+                                console.log(obj);
+
+                                uid = obj.uid;
+                                // 跳转主页
+                                location.href = "../index1.html"
+                                // 设置Cookie
+                                cookieFun.setCookie("uid", obj.uid, 7);
                             }
-                            let obj = JSON.parse(str);
-                            console.log(obj);
-                            // 跳转主页
-                            location.href = "../index1.html"
-                            // 设置Cookie
-                            cookieFun.setCookie("uid", obj.uid, 7);
-                        }
-                    })
+                        })
+                    }
+
 
                     // 用户存在
                     $.ajax({
@@ -303,11 +310,12 @@ $(function () {
                                     success: function (str) {
                                         if (str) {
                                             console.log(str);
-
+                                            getUid()
                                         }
                                     },
                                 })
-
+                            } else {
+                                getUid()
                             }
                         }
                     })

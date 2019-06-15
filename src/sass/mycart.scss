@@ -152,10 +152,7 @@ body {
 
                     }
 
-                    .imgbox {
-                        width: 50px;
-                        height: 35px;
-                    }
+
 
                     .bdright {
                         border-right: 1px solid #DCDFE4;
@@ -175,6 +172,17 @@ body {
                     width: 950px;
                     padding: 0 12px;
 
+                    .imgbox {
+                        width: 50px;
+                        height: 35px;
+
+                        img {
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
                     td {
                         height: 70px;
                         text-align: center;
@@ -189,8 +197,12 @@ body {
                         }
 
                         .subtract {
-                            background: url(../img/indeximg/cartsprite.png) no-repeat -51px 0;
+                            background: url(../img/mycart/cartsprite.png) no-repeat -51px 0;
                             margin-left: 15px;
+
+                            &:hover {
+                                background-position: -68px 0;
+                            }
                         }
 
                         .inputnum {
@@ -199,15 +211,77 @@ body {
                             height: 18px;
                             border: 1px solid #D8D8D8;
                             text-align: center;
+
+
                         }
 
                         .add {
                             background: url(../img/mycart/cartsprite.png) no-repeat 0px 0;
+
+                            &:hover {
+                                background-position: -17px 0;
+                            }
+                        }
+                    }
+
+                    .rowdelbox {
+                        position: relative;
+                        color: #999;
+
+                        .rowdel {
+                            color: #424242;
+
+                            &:hover {
+                                color: #A10000;
+                            }
+                        }
+
+                        .confirm {
+                            color: #333;
+                            position: absolute;
+                            width: 150px;
+                            height: 60px;
+                            border: 1px solid #A10000;
+                            text-align: center;
+                            top: -42px;
+                            background: #fff;
+                            right: 0px;
+                            display: none;
+
+                            p {
+                                padding: 10px 0;
+                                box-sizing: border-box;
+                            }
+
+                            a {
+                                color: #333;
+                                margin-right: 10px;
+
+                                &:hover {
+                                    color: #A10000;
+                                }
+                            }
+
+                            span {
+                                position: absolute;
+                                overflow: hidden;
+                                background-position: 0 0;
+                                height: 8px;
+                                width: 9px;
+                                left: 65%;
+                                bottom: -8px;
+                                background: url(../img/goods/icon-shopping.gif);
+                            }
+
                         }
                     }
 
                     .selected {
+
+
                         text-align: center;
+
+
                     }
 
                     .descript {
@@ -241,6 +315,11 @@ body {
 
                 .alldel {
                     margin: 0 20px 0 10px;
+                    color: #424242;
+
+                    &:hover {
+                        color: #A10000;
+                    }
                 }
 
                 span {
