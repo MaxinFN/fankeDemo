@@ -19,9 +19,9 @@ $(function () {
         });
 
         function rende(obj) {
-
+            console.log(obj)
             let html = obj.map(function (item) {
-                return `<tr>
+                return `<tr data-gid="${item.gid}">
                             <td></td>
                             <td class="selected">
                                 <input type="checkbox" class="checkedbtn">
@@ -32,7 +32,7 @@ $(function () {
                             <td class="descript">
                                 ${item.descript}
                             </td>
-                            <td>M</td>
+                            <td>${item.size}</td>
                             <td class="price">
                                 ￥${item.nowprice}.00
                             </td>
@@ -73,16 +73,8 @@ $(function () {
         console.log(val);
         val++;
         $(this).prev().val(val);
-
-        // 单价
-        // let pri = parseInt($.trim($(this).parent().prev().text()).slice(1));
-
-        // total = pri * val
-        // console.log(pri);
-        // let 
-        //刷新小计
+        // 刷新小计
         xiaoji($(this), val);
-
         //购物车统计
         all()
     })
@@ -97,26 +89,28 @@ $(function () {
         }
         $(this).next().val(val);
 
-        // let pri = parseInt($.trim($(this).parent().prev().text()).slice(1));
-
-        // total = pri * val
-        // console.log(pri);
-        // let 
         //刷新小计
         xiaoji($(this), val);
-
         //购物车统计
         all();
     })
 
     // 弹出删除
     $("tbody").on("click", ".rowdel", function () {
-        // $(this).parent().parent().remove();
         $(this).prev().css({ "display": "block" });
     })
 
     //确定删除
     $("tbody").on("click", ".yes", function () {
+        // 商品gid
+        let gid = $(this).parents("tr").attr("data-gid")
+        // 商品size
+        let size = $(this).parents("tr").children(".descript").next().text();
+        //数据库删除
+        sqlDel(gid, uid, size);
+
+        // console.log(gid, size);
+
         $(this).parents("tr").remove();
 
         //刷新购物车统计
@@ -133,6 +127,7 @@ $(function () {
         let flag = $(".allselect").prop("checked");
         console.log(flag);
 
+
         $(".checkedbtn").prop("checked", flag);
 
         //购物车统计
@@ -142,7 +137,6 @@ $(function () {
     // 单选控制全选
     $("tbody").on("change", ".checkedbtn", function () {
         // 单选框长度
-        // console.log($(".checkedbtn"));
         let len = $(".checkedbtn").length;
         let checkLen = $(".checkedbtn:checked").length;
         console.log(len)
@@ -161,11 +155,34 @@ $(function () {
     //全部删除
     $(".alldel").on("click", function () {
         $("tbody .selected .checkedbtn:checked").each(function () {
+            let gid = $(this).parent().parent().attr("data-gid");
+            let size = $(this).parent().parent().children(".price").prev().text();
+            console.log(gid, size);
+            //删除数据库购物车信息
+            sqlDel(gid, uid, size);
             $(this).parent().parent().remove();
         })
+        //购物车统计
         all();
     })
 
+
+    //删除购物数据库信息
+    function sqlDel(gid, uid, size) {
+        console.log(gid, uid, size)
+        $.ajax({
+            "type": "get",
+            "url": "../api/del.php",
+            data: {
+                "gid": gid * 1,
+                "uid": uid * 1,
+                "size": size,
+            },
+            success: function (str) {
+                console.log(str);
+            }
+        })
+    }
 
 
 
@@ -200,9 +217,6 @@ $(function () {
         let total = pri * val;
         _this.parent().next().next().html("￥" + total + ".00");
     }
-
-
-
 
 
 
